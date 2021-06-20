@@ -8,7 +8,7 @@ header{
     width: 100vw;
     position: fixed;
     top: 0;
-    z-index: 10;
+    z-index: 50;
     .header_wrapper{
         display: flex;
         padding-top: 39px;
@@ -69,6 +69,7 @@ main{
         margin: 0 auto;
         display: flex;
         padding-bottom: 68px;
+        position: relative;
         .about_container{
             display: flex;
             margin-left:auto;
@@ -83,6 +84,17 @@ main{
         }
         .about_text{
             margin-top: 66px;
+            position: relative;
+            .about_box{
+                position: absolute;
+                width: 464px;
+                height: 160px;
+                border: 3px solid #F7F3EA;
+                box-sizing: border-box;
+                left:-113px;
+                top: -35px;
+                z-index: 10;
+            }
             .about_description{
                 max-width: 512px;
                 font-family: Roboto;
@@ -97,6 +109,8 @@ main{
                 margin-bottom: 61px;
             }
             .about_more{
+                display: flex;
+                align-items: center;
                 font-family: Roboto;
                 font-style: normal;
                 font-weight: normal;
@@ -106,6 +120,9 @@ main{
 
 
                 color: #58595B;
+                p{
+                    margin-right: 9px;
+                }
             }
             .about_title{
                 h2{
@@ -149,6 +166,20 @@ main{
             max-width: 1200px;
             margin: 0 auto;
             position: relative;
+            display: flex;
+            flex-direction: column;
+            .manafacture_title{
+                font-family: Roboto;
+                font-style: normal;
+                font-weight: bold;
+                font-size: 30px;
+                line-height: 35px;
+
+                color: #4C86A0;
+                margin: 0 auto;
+                margin-top: 61px;
+                margin-bottom: 64px;
+            }
         }
         .manafacture_vawe{
             position: absolute;
