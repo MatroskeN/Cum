@@ -3,6 +3,7 @@ body{
 }
 a{
     text-decoration: none !important;
+    outline: none !important;
 }
 header{    
     width: 100vw;
@@ -19,7 +20,10 @@ header{
         align-items: center;
         .header__menu{
             display: flex;
+            padding-top: 20px;
             a{
+                width: auto;
+                min-width: 100px;
                 margin-right: 44px;
                 font-family: Roboto;
                 font-style: normal;
@@ -36,6 +40,49 @@ header{
                 }
                 &:hover{
                     color: #4C86A0;
+                    img{
+                        width:100%;
+                    }
+                }
+                img{
+                    position: relative;
+                    width:0;
+                    height:5.68px;
+                    transition: all 0.6s;
+                }
+            }
+        }
+        .lang_button{
+            border: none;
+            outline: none;
+            background: transparent;
+            display: flex;
+            align-items: center;
+            p{
+                font-family: Roboto;
+                font-style: normal;
+                font-weight: bold;
+                font-size: 18px;
+                line-height: 21px;
+                /* identical to box height */
+
+
+                color: #4C86A0;
+                margin-right: 7px;
+                transition: all 0.4s;
+            }
+            svg{
+                transition: all 0.4s;
+            }
+            &:hover{
+                svg{
+                    transform: rotateX(180deg);
+                    path{
+                        fill:#000;
+                    }
+                }
+                p{
+                    color: #000;
                 }
             }
         }
@@ -180,11 +227,460 @@ main{
                 margin-top: 61px;
                 margin-bottom: 64px;
             }
+            .manafacture_content{
+                .manafacture_swiper{
+                    position: relative;
+                    .manafacture_navigation{
+                        position: absolute;
+                        z-index: 6;
+                        top: 0;
+                        left: 638px;
+                        width: 80px;
+                        height: 40px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        background: rgba(255, 255, 255, 0.8);
+                        .next_arrow{
+                            transform: rotateY(180deg);
+                            margin-left:34px;
+                        }
+                    }
+                    .swiper-slide-active{
+                        width: 718px !important;
+                        height: 362px !important;
+                        margin-right: 72px;
+                        transition: all 0.4s;
+                        .manafacture_slide{
+                            position: relative;
+                            width: 718px;
+                            height: 362px;
+                            transition: all 0.4s;
+                            .slide_mask{
+                                position: absolute;
+                                width: 100%;
+                                height: 100%;
+                                top: 0;
+                                left: 0;
+                                z-index: 5;
+                                background: transparent;
+                                transition: all 0.4s;
+                            }
+                            img{
+                                width: 718px;
+                                height: 362px;
+                                transition: all 0.4s;
+                            }
+                        }
+                    }
+                    .manafacture_slide{
+                        position: relative;
+                        width: 410px;
+                        height: 240px;
+                        .slide_mask{
+                            position: absolute;
+                            width: 100%;
+                            height: 100%;
+                            top: 0;
+                            left: 0;
+                            z-index: 5;
+                            background: linear-gradient(0deg, rgba(255, 255, 255, 0.38), rgba(255, 255, 255, 0.38));
+                        }
+                        img{
+                            width: 410px;
+                            height: 240px;
+                        }
+                    }
+                }
+            }
+            .manafacture_more{
+                margin-top: 31px;
+                display: flex;
+                align-items: center;
+                p{
+                    font-family: Roboto;
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 16px;
+                    line-height: 149.19%;
+                    /* identical to box height, or 24px */
+
+
+                    color: #58595B;
+                    margin-right: 5px;
+                }
+            }
         }
         .manafacture_vawe{
             position: absolute;
             left: 0;
             bottom: 135px;
+        }
+        .manafacture_text{
+            position: absolute;
+            z-index:6;
+            width: 687px;
+            height: 245px;
+            bottom: 91px;
+            right: 360px;
+
+            background: #FFFFFF;
+            p{
+                padding: 50px 81px 49px 63px;
+                font-family: Roboto;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 16px;
+                line-height: 149.19%;
+                /* or 24px */
+
+
+                color: #58595B;
+            }
+            img{
+                position: absolute;
+                width: 124.51px;
+                height: 124.51px;
+                bottom: -52px;
+                right: -52px;
+                transform: rotate(15deg);
+            }
+        }
+    }
+    .product{
+        width: 100vw;
+        padding-top: 76px;
+        padding-bottom: 41px;
+        position: relative;
+        .product_vawe{
+            position: absolute;
+            right:0;
+            top: 164px;
+        }
+        .product_wrapper{
+            max-width: 1200px;
+            width: 100%;
+            margin: 0 auto;
+            display:flex;
+            .product_pics{
+                display: flex;
+                flex-flow: row wrap;
+                width: 600px;
+                .product_item{
+                    position: relative;
+                    width: 277px;
+                    height: 274px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    background: #FFFFFF;
+                    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+                    border-radius: 15px;
+                    margin-right: 30px;
+                    margin-bottom: 30px;
+                    .item_title{
+                        margin-top: 30px;
+                        font-family: Roboto;
+                        font-style: normal;
+                        font-weight: bold;
+                        font-size: 18px;
+                        line-height: 21px;
+                        text-align: center;
+
+                        color: #58595B;
+                        max-width: 229px;
+                    }
+                    &:nth-child(2n+2){
+                        margin-right: unset;
+                    }
+                    img{
+                        position: relative;
+                        z-index: 3;
+                    }
+                    .item_sun{
+                        position: absolute;
+                        width: 10px;
+                        height: 10px;
+                        opacity: 0;
+                        top: 100px;
+                        left:0;
+                        right: 0;
+                        margin: auto;
+                        background: #F9DD9A;
+                        border-radius: 70px;
+                        z-index: 2;
+                        transition: transform 0.4s;
+                    }
+
+                    &:hover{
+                        .item_sun{
+                            opacity: 1;
+                            transform: scale(15,15);
+                        }
+                    }
+                }
+            }
+            .product_info{
+                padding-left: 68px;
+                max-width: 496px;
+                .product_title{
+                    font-family: Roboto;
+                    font-style: normal;
+                    font-weight: bold;
+                    font-size: 30px;
+                    line-height: 35px;
+
+                    color: #4C86A0;
+                    margin-top: 51px;
+                }
+                hr{
+                    width: 57px;
+                    height: 1px;
+                    background: #4C86A0;
+                    margin: 23px 0 65px 0;
+                }
+                .product_subtitle{
+                    font-family: Roboto;
+                    font-style: normal;
+                    font-weight: bold;
+                    font-size: 18px;
+                    line-height: 149.19%;
+                    /* or 27px */
+
+                    text-transform: uppercase;
+
+                    color: #58595B;
+                }
+                .product_text{
+                    margin-top: 25px;
+                    p{
+                        font-family: Roboto;
+                        font-style: normal;
+                        font-weight: normal;
+                        font-size: 16px;
+                        line-height: 149.19%;
+                        /* or 24px */
+
+
+                        color: #58595B;
+                    }
+                }
+                .product_btn{
+                    background: #4C86A0;
+                    border-radius: 62px;
+                    display: flex;
+                    border: 1px solid transparent;
+                    margin-top: 40px;
+                    transition: all 0.4s;
+                    p{
+                        padding: 8px 23px 8px 23px;
+                        font-family: Roboto;
+                        font-style: normal;
+                        font-weight: normal;
+                        font-size: 16px;
+                        line-height: 149.19%;
+                        /* identical to box height, or 24px */
+                        color: #FFFFFF;
+                        transition: all 0.4s;
+                    }
+                    &:hover{
+                        background: #fff;
+                        border-color: #4C86A0;
+                        p{
+                            color: #4C86A0;
+                        }
+                    }
+                }
+            }
+        }   
+    }
+    .contact{
+        width: 100vw;
+        background: #F9F8F8;
+        position: relative;
+        padding-bottom: 105px;
+        .contact_title{
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 30px;
+            line-height: 35px;
+
+            color: #4C86A0;
+            padding-top: 51px;
+            margin-bottom: 71px;
+            text-align: center;
+        }
+        .contact_wrapper{
+            max-width: 1200px;
+            width:100%;
+            margin:0 auto;
+            display: flex;
+            position: relative;
+            z-index: 7;
+            .contact_info{
+                max-width: 588px;
+                .contact_item{
+                    strong{
+                        font-family: Roboto;
+                        font-style: normal;
+                        font-weight: bold;
+                        font-size: 20px;
+                        line-height: 23px;
+
+                        color: #4C86A0;
+                    }
+                    p{
+                        font-family: Roboto;
+                        font-style: normal;
+                        font-weight: normal;
+                        font-size: 16px;
+                        line-height: 149.19%;
+                        /* identical to box height, or 24px */
+
+
+                        color: #58595B;
+                        a{
+                            font-family: Roboto;
+                            font-style: normal;
+                            font-weight: normal;
+                            font-size: 16px;
+                            line-height: 149.19%;
+                            /* identical to box height, or 24px */
+
+
+                            color: #58595B;
+                        }
+                        margin-bottom: 22px;
+                        margin-top: 7px;
+                    }
+                }
+                .contact_firm{
+                    display: flex;
+                    align-items: center;
+                    img{
+                        margin-right:27px;
+                    }
+                    p{
+                        font-family: Roboto;
+                        font-style: normal;
+                        font-weight: bold;
+                        font-size: 19px;
+                        line-height: 22px;
+
+                        color: #4C86A0;
+                        a{
+                            color: #4C86A0;
+                            text-decoration: underline !important;
+                        }
+                    }
+                }
+            }
+        }
+        .contact_map{
+            position: absolute;
+            right: 0;
+            top:160px;
+            .world_time{
+                position: absolute;
+                left: -224px;
+                bottom:143px;
+                background: #4C86A0;
+                p{
+                    font-family: Roboto;
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 16px;
+                    line-height: 23px;
+
+                    color: #FFFFFF;
+                    padding: 11px 15px 12px 14px;
+                }
+            }
+        }
+        .contact_vawe{
+            position: absolute;
+            top: 111px;
+            left: 0;
+        }
+    }
+}
+.footer_line{
+    width:100vw;
+    height: 19px;
+    background: url(../img/footer-line.png);
+    background-repeat: repeat-x;    
+}
+footer{
+    width:100vw;
+    height: 338px;
+    background: #4C86A0;
+    position: relative;
+    .footer_ships{
+        position: absolute;
+        right: 0;
+        bottom:0;
+        z-index: 2;
+    }
+    .footer_wrapper{
+        padding-top: 15px;
+        max-width:1200px;
+        width:100%;
+        margin: 0 auto;
+        display: flex;
+        position: relative;
+        z-index: 3;
+        .footer_menu{
+            display: flex;
+            align-items: center;
+            margin-left: 77px;
+            .footer_item{
+                margin-right:37px;
+                font-family: Segoe UI;
+                font-style: normal;
+                font-weight: 600;
+                font-size: 16px;
+                line-height: 21px;
+
+                color: #FFFFFF;
+                &:last-child{
+                    margin-right: 80px;
+                }
+            }
+        }
+    }
+    .footer_basement{
+        max-width: 1200px;
+        width: 100%;
+        margin:0 auto;
+        margin-top: 127px;
+        display: flex;
+        position: relative;
+        z-index: 3;
+        .copyright{
+            a{
+                font-family: Roboto;
+                font-style: normal;
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 19px;
+                /* identical to box height */
+
+
+                color: #FFFFFF;
+            }
+        }
+        .year{
+            margin-top: 46px;
+            margin-left: 336px;
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 21px;
+
+            color: #FFFFFF;
         }
     }
 }

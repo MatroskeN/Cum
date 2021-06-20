@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />    
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
@@ -23,21 +24,39 @@
                 <img src="img/cum_logo.svg" alt="logo">
             </a>
             <div class="header__menu">
-                <a href="#">О компании</a>
-                <a href="#">Наше производство</a>
-                <a href="#">Продукция</a>
-                <a href="#">Вакансии</a>
-                <a href="#">Контакты</a>
+                <a href="#">
+                    <p>О компании</p>
+                    <img src="img/hover-line.png" alt="hover-line">
+                </a>
+                <a href="#">
+                    <p>Наше производство</p>
+                    <img src="img/hover-line.png" alt="hover-line">
+                </a>
+                <a href="#">
+                    <p>Продукция</p>
+                    <img src="img/hover-line.png" alt="hover-line">
+                </a>
+                <a href="#">
+                    <p>Вакансии</p>
+                    <img src="img/hover-line.png" alt="hover-line">
+                </a>
+                <a href="#">
+                    <p>Контакты</p>
+                    <img src="img/hover-line.png" alt="hover-line">
+                </a>
             </div>
             <div class="header__lang_panel">
                 <button class="lang_button">
-                    Ru
+                    <p>Ru</p>
+                    <svg width="9" height="6" viewBox="0 0 9 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4.33013 6L0 0L8.66025 7.57103e-07L4.33013 6Z" fill="#4C86A0"/>
+                    </svg>
                 </button>
             </div>
         </div>
     </header>
     <main>
-        <div class="banner">
+        <div class="banner" name="header">
             <h1 class="banner_title">
                 Камчатское рыбодобывающее <br>
                 и рыбоперерабатывающее предприятие
@@ -85,14 +104,212 @@
                     Наше производство
                 </h2>
                 <div class="manafacture_content">
-
+                    <div class="swiper-container manafacture_swiper">
+                        <div class="manafacture_navigation">
+                            <div class="prev_arrow">
+                                <svg width="10" height="19" viewBox="0 0 10 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M8.2718 0.314635C8.65032 -0.0875385 9.28319 -0.106717 9.68536 0.2718C10.0875 0.650316 10.1067 1.28319 9.7282 1.68536L8.2718 0.314635ZM1 9.5L0.2718 10.1854C-0.0906 9.80031 -0.0906 9.19969 0.2718 8.81464L1 9.5ZM9.7282 17.3146C10.1067 17.7168 10.0875 18.3497 9.68536 18.7282C9.28319 19.1067 8.65032 19.0875 8.2718 18.6854L9.7282 17.3146ZM9.7282 1.68536L1.7282 10.1854L0.2718 8.81464L8.2718 0.314635L9.7282 1.68536ZM1.7282 8.81464L9.7282 17.3146L8.2718 18.6854L0.2718 10.1854L1.7282 8.81464Z" fill="#4C86A0"/>
+                                </svg>
+                            </div>
+                            <div class="next_arrow">
+                                <svg width="10" height="19" viewBox="0 0 10 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M8.2718 0.314635C8.65032 -0.0875385 9.28319 -0.106717 9.68536 0.2718C10.0875 0.650316 10.1067 1.28319 9.7282 1.68536L8.2718 0.314635ZM1 9.5L0.2718 10.1854C-0.0906 9.80031 -0.0906 9.19969 0.2718 8.81464L1 9.5ZM9.7282 17.3146C10.1067 17.7168 10.0875 18.3497 9.68536 18.7282C9.28319 19.1067 8.65032 19.0875 8.2718 18.6854L9.7282 17.3146ZM9.7282 1.68536L1.7282 10.1854L0.2718 8.81464L8.2718 0.314635L9.7282 1.68536ZM1.7282 8.81464L9.7282 17.3146L8.2718 18.6854L0.2718 10.1854L1.7282 8.81464Z" fill="#4C86A0"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide slider">
+                            <div class="manafacture_slide">
+                                <div class="slide_mask"></div>
+                                <img src="img/manafacture.png" alt="slider"> 
+                            </div>
+                          </div>
+                          <div class="swiper-slide slider manafacture_slide">
+                            <div class="manafacture_slide">
+                                <div class="slide_mask"></div>
+                                <img src="img/manafacture.png" alt="slider"> 
+                            </div>   
+                          </div>
+                          <div class="swiper-slide slider manafacture_slide">
+                            <div class="manafacture_slide">
+                                <div class="slide_mask"></div>
+                                <img src="img/manafacture.png" alt="slider"> 
+                            </div>   
+                          </div>
+                          <div class="swiper-slide slider manafacture_slide">
+                            <div class="manafacture_slide">
+                                <div class="slide_mask"></div>
+                                <img src="img/manafacture.png" alt="slider"> 
+                            </div>   
+                          </div>
+                        </div>
+                    </div>
+                    <div class="manafacture_more">
+                        <p>Подробнее</p>
+                        <svg width="7" height="10" viewBox="0 0 7 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 5.26316L1 1V9.5L6 5.26316Z" stroke="#58595B" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
                 </div>
             </div>
             <img src="img/vawe.png" alt="vawe" class="manafacture_vawe">
+            <div class="manafacture_text">
+                <img src="img/quality.png" alt="quality">
+                <p>Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного текста рыбы на русском языке, а начинающему оратору отточить навык публичных выступлений в домашних условиях. При создании генератора мы использовали небезизвестный универсальный код речей. Текст генерируется абзацами случайным образом.</p>
+            </div>
+        </div>
+        <div class="product">
+            <img src="img/vawe_product.png" alt="vawe" class="product_vawe">
+            <div class="product_wrapper">
+                <div class="product_pics">
+                    <div class="product_item">
+                        <div class="item_sun"></div>
+                        <img src="img/block.png" alt="block">
+                        <div class="item_title">
+                            Замороженная блочная продукция
+                        </div>
+                    </div>
+                    <div class="product_item">
+                        <div class="item_sun"></div>
+                        <img src="img/can.png" alt="can">
+                        <div class="item_title">
+                            Консервы
+                        </div>
+                    </div>
+                    <div class="product_item">
+                        <div class="item_sun"></div>
+                        <img src="img/fish.png" alt="fish">
+                        <div class="item_title">
+                            Замороженная рыба
+                        </div>
+                    </div>
+                    <div class="product_item">
+                        <div class="item_sun"></div>
+                        <img src="img/wheat.png" alt="wheat">
+                        <div class="item_title">
+                            Продукты переработки гидробионтов
+                        </div>
+                    </div>
+                </div>
+                <div class="product_info">
+                    <h2 class="product_title">
+                        Продукция
+                    </h2>
+                    <hr>
+                    <div class="product_subtitle">
+                        Собственное Камчатское производство, натуральный состав, высокое качество. 
+                    </div>
+                    <div class="product_text">
+                        <p>
+                            Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного текста рыбы на русском языке, а начинающему оратору отточить навык публичных выступлений в домашних условиях. При создании генератора мы использовали небезизвестный универсальный код речей. Текст генерируется абзацами случайным образом.
+                        </p>
+                    </div>
+                    <button class="product_btn">
+                        <p>Смотреть всю продукцию</p>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="contact">
+            <h2 class="contact_title">
+                Контакты
+            </h2>
+            <div class="contact_wrapper">
+                <div class="contact_info">
+                    <div class="contact_item">
+                        <strong>
+                            Адрес производства:
+                        </strong>
+                        <p>
+                            Россия, Камчатский край, г. Петропавловск-Камчаткий, ул. Чавычная, 19
+                        </p>
+                    </div>
+                    <div class="contact_item">
+                        <strong>
+                            Адрес для почтовых отправлений:
+                        </strong>
+                        <p>
+                            Россия, Камчатский край, г. Петропавловск-Камчаткий
+                        </p>
+                    </div>
+                    <div class="contact_item">
+                        <strong>
+                            Телефон:
+                        </strong>
+                        <p>
+                            <a href="tel:+84152307150">+7 (4152) 30-71-50 </a>
+                        </p>
+                    </div>
+                    <div class="contact_item">
+                        <strong>
+                            E-mail:
+                        </strong>
+                        <p>
+                            <a href="mailto:myemail.com">myemail.com</a>
+                        </p>
+                    </div>
+                    <div class="contact_firm">
+                        <img src="img/contact-logo.png" alt="logo">
+                        <p>По вопросам реализации нашей продукции обращаться в компанию <a href="#">ООО "Морской Меридиан"</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="contact_map">
+                <img src="img/map.png" alt="map">
+                <div class="world_time">
+                    <p>
+                        Время на Камчатке: <br>
+                        12:55 (МСК +9)
+                    </p>
+                </div>
+            </div>
+            <img src="img/vawe.png" alt="vawe" class="contact_vawe">
         </div>
     </main>
+    <div class="footer_line">
+
+    </div>
     <footer>
-        
+        <div class="footer_ships">
+            <img src="img/footer_ships.png" alt="ships">
+        </div>
+        <div class="footer_wrapper">
+            <a href="#">
+                <img src="img/logo-footer.svg" alt="logo" class="footer_logo">
+            </a>
+            <div class="footer_menu">
+                <a href="#" class="footer_item">
+                    О компании
+                </a>
+                <a href="#" class="footer_item">
+                    Производство
+                </a>
+                <a href="#" class="footer_item">
+                    Продукция
+                </a>
+                <a href="#" class="footer_item">
+                    Вакансии
+                </a>
+                <a href="#" class="footer_item">
+                    Новости
+                </a>
+                <a href="#" class="footer_item">
+                    Контакты
+                </a>
+            </div>
+            <div class="anchor">
+                <a href="#"><img src="img/anchor.png" alt="anchor"></a>
+            </div>
+        </div>
+        <div class="footer_basement">
+            <div class="copyright">
+                <a href="#">Разработано в Site-Creative</a> <br>
+                <a href="#">Политика конфиденциальности</a>
+            </div>
+            <div class="year">
+                <p>2021</p>
+            </div>
+        </div>
     </footer>
     <!-- scripts -->
     <script src="js/main.js"></script>
