@@ -63,6 +63,13 @@
                     </div>
                 </div>
             </div>
+            <div class="burger">
+                <svg width="30" height="19" viewBox="0 0 30 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="30" height="3" rx="1.5" fill="#4C86A0"/>
+                    <rect y="8" width="30" height="3" rx="1.5" fill="#4C86A0"/>
+                    <rect y="16" width="30" height="3" rx="1.5" fill="#4C86A0"/>
+                </svg>
+            </div>
         </div>
     </header>
     <main>
@@ -70,12 +77,24 @@
             <div class="banner_mountain">
 
             </div>
-            <h1 class="banner_title" data-aos="fade-up" data-aos-duration="1500">
-                Камчатское рыбодобывающее <br>
-                и рыбоперерабатывающее предприятие
-            </h1>
+            <div class="banner_wrapper">
+                <h1 class="banner_title" data-aos="fade-up" data-aos-duration="1500">
+                    Камчатское рыбодобывающее <br>
+                    и рыбоперерабатывающее предприятие
+                </h1>
+            </div>
             <div class="banner_sea mouse-parallax-bg-sea"></div>
             <div class="banner_ship mouse-parallax-bg"></div>
+            <svg class="scroll_arrow swing" width="34" height="30" viewBox="0 0 34 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2 13L17 28L32 13" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M6 2L17 13L28 2" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </div>
+        <div class="mbanner">
+
+        </div>
+        <div class="mbanner_title">
+            <p>Камчатское рыбодобывающее и рыбоперерабатывающее предприятие</p>
         </div>
         <div class="about">
             <div class="swiper-container about_container" id="slideMain">
@@ -178,23 +197,28 @@
                           </div>
                         </div>
                     </div>
-                    <div class="manafacture_more">
+                    <a href="#" class="manafacture_more">
                         <p>Подробнее</p>
-                        <svg width="7" height="10" viewBox="0 0 7 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M6 5.26316L1 1V9.5L6 5.26316Z" stroke="#58595B" stroke-linecap="round" stroke-linejoin="round"/>
+                        <svg width="26" height="11" viewBox="0 0 26 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M25.5 5.5L19 1V10L25.5 5.5Z" stroke="#58595B" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M7.5 5.5L1 1V10L7.5 5.5Z" stroke="#58595B" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M8 5.5L19 1V10L8 5.5Z" stroke="#58595B" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
-                    </div>
+                    </a>
+                </div>
+                <div class="manafacture_text" data-aos="fade-up" data-aos-duration="1500">
+                    <img src="img/quality.png" alt="quality">
+                    <p>Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного текста рыбы на русском языке, а начинающему оратору отточить навык публичных выступлений в домашних условиях. При создании генератора мы использовали небезизвестный универсальный код речей. Текст генерируется абзацами случайным образом.</p>
                 </div>
             </div>
             <img src="img/vawe.png" alt="vawe" class="manafacture_vawe">
-            <div class="manafacture_text" data-aos="fade-up" data-aos-duration="1500">
-                <img src="img/quality.png" alt="quality">
-                <p>Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного текста рыбы на русском языке, а начинающему оратору отточить навык публичных выступлений в домашних условиях. При создании генератора мы использовали небезизвестный универсальный код речей. Текст генерируется абзацами случайным образом.</p>
-            </div>
+            <img src="img/vawe.png" alt="vawe" class="manafacture_vawe2">
         </div>
         <div class="product">
             <img src="img/vawe_product.png" alt="vawe" class="product_vawe">
             <div class="product_wrapper">
+                <div class="mproduct_title">Продукция</div>
+                <hr class="mhr">
                 <div class="product_pics">
                     <div class="product_item">
                         <div class="item_sun"></div>
@@ -207,7 +231,7 @@
                         <div class="item_sun"></div>
                         <img src="img/can.png" alt="can">
                         <div class="item_title">
-                            Консервы
+                            Рыбные консервы
                         </div>
                     </div>
                     <div class="product_item">
@@ -225,6 +249,9 @@
                         </div>
                     </div>
                 </div>
+                <button class="mproduct_btn">
+                    <p>Смотреть всю продукцию</p>
+                </button>
                 <div class="product_info">
                     <h2 class="product_title" data-aos="fade-up" data-aos-duration="1500">
                         Продукция
@@ -247,6 +274,7 @@
         <div class="contact">
             <h2 class="contact_title">
                 Контакты
+                <hr class="mhr">
             </h2>
             <div class="contact_wrapper">
                 <div class="contact_info">
@@ -289,7 +317,7 @@
                 </div>
             </div>
             <div class="contact_map">
-                <img src="img/map.png" alt="map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13628.165338541909!2d-118.4121215838409!3d33.939854843470236!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2b0d213b24fb5%3A0x77a87b57698badf1!2z0JzQtdC20LTRg9C90LDRgNC-0LTQvdGL0Lkg0LDRjdGA0L7Qv9C-0YDRgiDQm9C-0YEt0JDQvdC00LbQtdC70LXRgQ!5e0!3m2!1sru!2sru!4v1624275747065!5m2!1sru!2sru" width="100%" height="422" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                 <div class="world_time">
                     <p>
                         Время на Камчатке: <br>
@@ -298,6 +326,7 @@
                 </div>
             </div>
             <img src="img/vawe.png" alt="vawe" class="contact_vawe">
+            <img src="img/vawe.png" alt="vawe" class="contact_vawe2">
         </div>
     </main>
     <div class="footer_line">
@@ -335,10 +364,45 @@
                 <a href="#"><img src="img/anchor.png" alt="anchor"></a>
             </div>
         </div>
+        <div class="mfooter_wrapper">
+            <div class="footer_menu">
+                <a href="#" class="footer_item">
+                    О компании
+                </a>
+                <a href="#" class="footer_item">
+                    Производство
+                </a>
+                <a href="#" class="footer_item">
+                    Продукция
+                </a>
+                <a href="#" class="footer_item">
+                    Вакансии
+                </a>
+                <a href="#" class="footer_item">
+                    Новости
+                </a>
+                <a href="#" class="footer_item">
+                    Контакты
+                </a>
+            </div>
+        </div>
         <div class="footer_basement">
             <div class="copyright">
                 <a href="#">Разработано в Site-Creative</a> <br>
                 <a href="#">Политика конфиденциальности</a>
+            </div>
+            <div class="year">
+                <p>2021</p>
+            </div>
+        </div>
+        <div class="mfooter_basement">
+            <div class="copyrights">
+                <div class="copyright">
+                    <a href="#">Разработано в Сайт-креатив</a>
+                </div>
+                <div class="policy">
+                    <a href="#">Политика конфиденциальности</a>
+                </div>
             </div>
             <div class="year">
                 <p>2021</p>
@@ -351,6 +415,7 @@
         AOS.init();
     </script>
     <script src="js/main.js"></script>
+
     <script src="js/libs.min.js"></script>
 </body>
 </html>

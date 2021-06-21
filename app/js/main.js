@@ -7,12 +7,17 @@ $( document ).ready(function() {
     },
   });
   var swiper1 = new Swiper('.manafacture_swiper', {
-    slidesPerView: '2',
+    slidesPerView: 'auto',
     speed: 1000,
     navigation: {
       nextEl: '.next_arrow',
       prevEl: '.prev_arrow',
     },
+    breakpoints:{
+      426: {
+        slidesPerView: '2',
+      },
+    }
   });
   let bg = document.querySelector('.mouse-parallax-bg');
   window.addEventListener('mousemove', function(e) {
@@ -46,4 +51,21 @@ $('.second_lang').on("click", function () {
   $('.lang_data').html('Eng');
   $('.fade_up_panel').css({'opacity':'0'});
 });
+
+
+//headerscroll
+var scroll = 0;
+    
+$(window).on("scroll", function(){
+    scroll = window.pageYOffset || (document.documentElement.clientHeight ? document.documentElement.scrollTop : document.body.scrollTop);
+    if ((scroll + 120) > $(".banner").height()) { // высота банера
+        console.log('height')
+        $('#head').addClass("scroll-header");
+    }
+    if ((scroll + 120) < $(".banner").height()){
+        $('#head').removeClass("scroll-header");
+    }
+});
+
+
 });

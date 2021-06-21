@@ -184,24 +184,39 @@ header .header_wrapper .lang_button:hover svg path {
 header .header_wrapper .lang_button:hover p {
   color: #000;
 }
+.scroll-header {
+  background: #fff;
+  padding-bottom: 20px;
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s;
+  -webkit-box-shadow: 0px 5px 25px -5px rgba(34, 60, 80, 0.6);
+  box-shadow: 0px 5px 25px -5px rgba(34, 60, 80, 0.6);
+}
 main .banner {
+  display: block;
   width: 100%;
   position: relative;
   height: 807px;
   margin-bottom: 62px;
   overflow: hidden;
 }
-main .banner .banner_title {
+main .banner .banner_wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+main .banner .banner_wrapper .banner_title {
   max-width: 780px;
   font-family: Roboto;
   font-style: normal;
   font-weight: bold;
-  font-size: 50px;
+  font-size: 46px;
   line-height: 108.01%;
   letter-spacing: 0.02em;
   text-transform: uppercase;
   color: #FFFFFF;
-  margin-left: 20vw;
+  margin-left: 0;
   padding-top: 356px;
   position: relative;
   z-index: 10;
@@ -240,6 +255,44 @@ main .banner .banner_ship {
   -o-transition: all 0.1s ease;
   transition: all 0.1s ease;
 }
+main .banner .scroll_arrow {
+  position: absolute;
+  z-index: 10;
+  bottom: 43px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  -webkit-animation: spin 2.4s infinite linear;
+          animation: spin 2.4s infinite linear;
+}
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: translate3d(0, -50%, 0);
+            transform: translate3d(0, -50%, 0);
+  }
+  50% {
+    -webkit-transform: translate3d(0, 50%, 0);
+            transform: translate3d(0, 50%, 0);
+  }
+  100% {
+    -webkit-transform: translate3d(0, -50%, 0);
+            transform: translate3d(0, -50%, 0);
+  }
+}
+@keyframes spin {
+  0% {
+    -webkit-transform: translate3d(0, -50%, 0);
+            transform: translate3d(0, -50%, 0);
+  }
+  50% {
+    -webkit-transform: translate3d(0, 50%, 0);
+            transform: translate3d(0, 50%, 0);
+  }
+  100% {
+    -webkit-transform: translate3d(0, -50%, 0);
+            transform: translate3d(0, -50%, 0);
+  }
+}
 main .about {
   max-width: 1200px;
   margin: 0 auto;
@@ -255,7 +308,8 @@ main .about .about_container {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  margin-left: auto;
+  margin-left: 0;
+  margin-right: 72px;
   width: 582px;
   height: 563px;
 }
@@ -611,21 +665,37 @@ main .manafacture .manafacture_wrapper .manafacture_more p {
   color: #58595B;
   margin-right: 5px;
 }
-main .manafacture .manafacture_vawe {
-  position: absolute;
-  left: 0;
-  bottom: 135px;
+main .manafacture .manafacture_wrapper .manafacture_more p {
+  padding-right: 9px;
+  position: relative;
+  z-index: 2;
+  background: #F9F8F8;
 }
-main .manafacture .manafacture_text {
+main .manafacture .manafacture_wrapper .manafacture_more svg {
+  position: relative;
+  z-index: 1;
+  -webkit-transform: translateX(-23px);
+      -ms-transform: translateX(-23px);
+          transform: translateX(-23px);
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s;
+}
+main .manafacture .manafacture_wrapper .manafacture_more:hover svg {
+  -webkit-transform: translateX(0px);
+      -ms-transform: translateX(0px);
+          transform: translateX(0px);
+}
+main .manafacture .manafacture_wrapper .manafacture_text {
   position: absolute;
   z-index: 6;
   width: 687px;
   height: 245px;
-  bottom: 91px;
-  right: 360px;
+  bottom: -100px;
+  right: 0;
   background: #FFFFFF;
 }
-main .manafacture .manafacture_text p {
+main .manafacture .manafacture_wrapper .manafacture_text p {
   padding: 50px 81px 49px 63px;
   font-family: Roboto;
   font-style: normal;
@@ -635,7 +705,7 @@ main .manafacture .manafacture_text p {
   /* or 24px */
   color: #58595B;
 }
-main .manafacture .manafacture_text img {
+main .manafacture .manafacture_wrapper .manafacture_text img {
   position: absolute;
   width: 124.51px;
   height: 124.51px;
@@ -644,6 +714,16 @@ main .manafacture .manafacture_text img {
   -webkit-transform: rotate(15deg);
       -ms-transform: rotate(15deg);
           transform: rotate(15deg);
+}
+main .manafacture .manafacture_vawe {
+  position: absolute;
+  left: 0;
+  bottom: 135px;
+}
+main .manafacture .manafacture_vawe2 {
+  position: absolute;
+  left: 0;
+  bottom: 0;
 }
 main .product {
   width: 100vw;
@@ -912,7 +992,13 @@ main .contact .contact_map {
   right: 0;
   top: 160px;
   width: 50%;
+  height: 422px;
   overflow-x: hidden;
+  z-index: 1;
+}
+main .contact .contact_map .map {
+  width: 100%;
+  height: 422px;
 }
 main .contact .contact_map .world_time {
   position: absolute;
@@ -933,6 +1019,13 @@ main .contact .contact_vawe {
   position: absolute;
   top: 111px;
   left: 0;
+  z-index: 0;
+}
+main .contact .contact_vawe2 {
+  position: absolute;
+  top: -25px;
+  left: 0;
+  z-index: 0;
 }
 .footer_line {
   width: 100vw;
@@ -1017,4 +1110,545 @@ footer .footer_basement .year {
   font-size: 16px;
   line-height: 21px;
   color: #FFFFFF;
+}
+.burger,
+.mbanner,
+.mbanner_title,
+.mproduct_title,
+.mhr,
+.mproduct_btn,
+.mfooter_wrapper,
+.mfooter_basement {
+  display: none;
+}
+@media (max-width: 1200px) {
+  header .header_wrapper {
+    max-width: 600px;
+  }
+  header .header_wrapper .header__menu {
+    display: none;
+  }
+  header .header_wrapper .burger {
+    display: block;
+  }
+  main .banner .banner_wrapper .banner_title {
+    margin: 0 auto !important;
+    text-align: center;
+  }
+  main .about {
+    max-width: 600px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  main .manafacture .manafacture_wrapper {
+    max-width: 600px;
+  }
+  main .manafacture .manafacture_wrapper .manafacture_more {
+    position: absolute;
+    bottom: -150px;
+  }
+  main .product .product_wrapper {
+    max-width: 600px;
+  }
+  main .contact {
+    padding-bottom: unset;
+  }
+  main .contact .contact_wrapper {
+    max-width: 600px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  main .contact .contact_map {
+    position: unset;
+    width: 100%;
+    margin-top: 20px;
+  }
+  main .contact .contact_map .world_time {
+    position: absolute;
+    left: 717px;
+    top: 380px;
+    bottom: unset;
+  }
+  footer .footer_wrapper {
+    max-width: 600px;
+  }
+  footer .footer_wrapper .footer_menu {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-flow: column wrap;
+        -ms-flex-flow: column wrap;
+            flex-flow: column wrap;
+    margin: 0 40px 0 40px;
+    height: 160px;
+    width: 300px;
+  }
+  footer .footer_wrapper .footer_menu .footer_item {
+    margin-right: 20px;
+    margin-bottom: 21px;
+    min-width: 108px;
+  }
+  footer .footer_wrapper .footer_menu .footer_item:last-child {
+    margin-right: 20px;
+  }
+  footer .footer_basement {
+    max-width: 600px;
+    padding-bottom: 20px;
+    margin-top: 27px;
+  }
+}
+@media (max-width: 768px) {
+  header .header_wrapper {
+    max-width: 320px;
+  }
+  main .banner {
+    display: none;
+    height: 100vw;
+  }
+  main .mbanner {
+    width: 100vw;
+    height: 100vw;
+    display: block;
+    background: url(../img/mob_banner.png) no-repeat center;
+    background-size: cover;
+  }
+  main .mbanner_title {
+    display: block;
+    max-width: 300px;
+    margin: 0 auto;
+    margin-top: 12px;
+    margin-bottom: 15px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 108.01%;
+    /* or 22px */
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: #4C86A0;
+  }
+  main .about {
+    max-width: 320px;
+    padding-bottom: 33px;
+  }
+  main .about .about_container {
+    width: 290px;
+    height: 282px;
+  }
+  main .about .about_container .about_slider img {
+    width: 290px;
+    height: 282px;
+  }
+  main .about .about_text {
+    margin-top: 33px;
+  }
+  main .about .about_text .about_title h2 {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 23px;
+    color: #4C86A0;
+  }
+  main .about .about_text .about_title hr {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #4C86A0;
+  }
+  main .about .about_text .about_title p {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 136.19%;
+    /* identical to box height, or 19px */
+    color: #F28660;
+    margin-bottom: unset;
+  }
+  main .about .about_text .about_box {
+    width: 459px;
+    height: 100px;
+    left: -247px;
+    top: -18px;
+  }
+  main .about .about_text .about_description {
+    max-width: 320px;
+    margin-top: 29px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 149.19%;
+    /* or 21px */
+    color: #58595B;
+    margin-bottom: 25px;
+  }
+  main .manafacture {
+    height: 640px;
+    overflow-x: hidden;
+  }
+  main .manafacture .manafacture_wrapper {
+    max-width: 320px;
+  }
+  main .manafacture .manafacture_wrapper .manafacture_title {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 23px;
+    color: #4C86A0;
+    margin-top: 38px;
+    margin-bottom: 35px;
+    margin-left: 15px;
+  }
+  main .manafacture .manafacture_wrapper .manafacture_content .manafacture_swiper .manafacture_navigation {
+    top: unset;
+    left: unset;
+    bottom: 0;
+    right: 41px;
+  }
+  main .manafacture .manafacture_wrapper .manafacture_content .manafacture_swiper .swiper-slide-active {
+    width: 279px !important;
+    height: 200px !important;
+    margin-right: 11px;
+  }
+  main .manafacture .manafacture_wrapper .manafacture_content .manafacture_swiper .swiper-slide-active .manafacture_slide {
+    width: 279px !important;
+    height: 200px !important;
+    margin-right: 11px;
+  }
+  main .manafacture .manafacture_wrapper .manafacture_content .manafacture_swiper .swiper-slide-active .manafacture_slide img {
+    width: 279px;
+    height: 200px;
+  }
+  main .manafacture .manafacture_wrapper .manafacture_content .manafacture_swiper .manafacture_slide {
+    width: 279px !important;
+    height: 200px !important;
+    margin-right: 11px;
+  }
+  main .manafacture .manafacture_wrapper .manafacture_content .manafacture_swiper .manafacture_slide .slide_mask {
+    display: none;
+  }
+  main .manafacture .manafacture_wrapper .manafacture_text {
+    position: relative;
+    background: transparent;
+    width: 289px;
+    height: auto;
+    bottom: unset;
+  }
+  main .manafacture .manafacture_wrapper .manafacture_text p {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 149.19%;
+    /* or 21px */
+    color: #58595B;
+    padding: 0;
+    padding-top: 33px;
+  }
+  main .manafacture .manafacture_wrapper .manafacture_text img {
+    width: 81px;
+    height: 81px;
+    right: -12px;
+  }
+  main .manafacture .manafacture_wrapper .manafacture_more {
+    bottom: -60px;
+  }
+  main .manafacture .manafacture_vawe,
+  main .manafacture .manafacture_vawe2 {
+    -webkit-transform: rotateX(180deg);
+            transform: rotateX(180deg);
+  }
+  main .manafacture .manafacture_vawe {
+    bottom: 55px;
+  }
+  main .manafacture .manafacture_vawe2 {
+    bottom: -87px;
+  }
+  main .product .product_wrapper {
+    max-width: 320px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  main .product .product_wrapper .mproduct_title {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 23px;
+    color: #4C86A0;
+  }
+  main .product .product_wrapper .mhr {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    width: 57px;
+    height: 1px;
+    background: #4C86A0;
+    margin: 10px 0 23px 0;
+  }
+  main .product .product_wrapper .product_pics {
+    width: 300px;
+    margin: 0 auto;
+  }
+  main .product .product_wrapper .product_pics .product_item {
+    width: 142px;
+    height: 140px;
+    margin-right: 6px;
+    margin-bottom: 5px;
+  }
+  main .product .product_wrapper .product_pics .product_item img {
+    max-width: 104px;
+    max-height: 60px;
+  }
+  main .product .product_wrapper .product_pics .product_item .item_title {
+    max-width: 132px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 14px;
+    text-align: center;
+    color: #58595B;
+    margin-top: 13px;
+  }
+  main .product .product_wrapper .product_pics .product_item:nth-child(2n+2) {
+    margin-right: unset;
+  }
+  main .product .product_wrapper .mproduct_btn {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    background: #4C86A0;
+    border-radius: 62px;
+    border: 1px solid #4C86A0;
+    margin: 0 auto;
+    margin-top: 33px;
+    margin-bottom: 27px;
+    padding: 5px 12px 6px 11px;
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    transition: all 0.4s;
+  }
+  main .product .product_wrapper .mproduct_btn p {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 149.19%;
+    /* identical to box height, or 21px */
+    color: #FFFFFF;
+  }
+  main .product .product_wrapper .mproduct_btn:hover {
+    background: #fff;
+  }
+  main .product .product_wrapper .mproduct_btn:hover p {
+    color: #4C86A0;
+  }
+  main .product .product_wrapper .product_info {
+    padding: 0;
+    max-width: 320px;
+    margin: 0 auto;
+  }
+  main .product .product_wrapper .product_info .product_title,
+  main .product .product_wrapper .product_info hr,
+  main .product .product_wrapper .product_info .product_btn {
+    display: none;
+  }
+  main .product .product_wrapper .product_info .product_subtitle {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 149.19%;
+    /* or 24px */
+    text-transform: uppercase;
+    color: #58595B;
+  }
+  main .product .product_wrapper .product_info .product_text {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 149.19%;
+    /* or 21px */
+    color: #58595B;
+    margin-top: 12px;
+  }
+  main .contact {
+    overflow-x: hidden;
+  }
+  main .contact .contact_vawe,
+  main .contact .contact_vawe2 {
+    -webkit-transform: rotateX(180deg);
+            transform: rotateX(180deg);
+  }
+  main .contact .contact_title {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 23px;
+    color: #4C86A0;
+    padding-top: 20px;
+    margin-bottom: unset;
+    text-align: left;
+    max-width: 320px;
+    margin: 0 auto;
+  }
+  main .contact .mhr {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    width: 57px;
+    height: 1px;
+    background: #4C86A0;
+    margin: 10px 0 15px 0;
+  }
+  main .contact .contact_wrapper {
+    max-width: 320px;
+  }
+  main .contact .contact_wrapper .contact_info {
+    max-width: 320px;
+  }
+  main .contact .contact_wrapper .contact_info .contact_item strong {
+    font-size: 16px;
+    line-height: 19px;
+  }
+  main .contact .contact_wrapper .contact_info .contact_item p,
+  main .contact .contact_wrapper .contact_info .contact_item a {
+    font-size: 14px;
+  }
+  main .contact .contact_wrapper .contact_info .contact_firm p {
+    font-size: 14px;
+    line-height: 16px;
+  }
+  main .contact .contact_map {
+    padding-bottom: 40px;
+  }
+  main .contact .contact_map .world_time {
+    left: unset;
+    right: 0;
+    top: 300px;
+  }
+  footer {
+    height: 579px;
+    overflow-x: hidden;
+  }
+  footer .footer_ships {
+    right: -100%;
+  }
+  footer .footer_wrapper {
+    max-width: 320px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  footer .footer_wrapper .footer_logo {
+    width: 178px;
+    height: 65px;
+  }
+  footer .footer_wrapper .footer_menu {
+    display: none;
+  }
+  footer .footer_wrapper .anchor {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  footer .mfooter_wrapper {
+    display: block;
+  }
+  footer .mfooter_wrapper .footer_menu {
+    max-width: 320px;
+    height: 120px;
+    margin: 0 auto;
+    margin-top: 31px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-flow: column wrap;
+        -ms-flex-flow: column wrap;
+            flex-flow: column wrap;
+    -webkit-align-content: space-around;
+        -ms-flex-line-pack: distribute;
+            align-content: space-around;
+  }
+  footer .mfooter_wrapper .footer_menu .footer_item {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 16px;
+    color: #FFFFFF;
+    margin-bottom: 21px;
+    text-align: left;
+  }
+  footer .footer_basement {
+    display: none;
+  }
+  footer .mfooter_basement {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    max-width: 320px;
+    margin: 0 auto;
+    margin-top: 100%;
+    margin-bottom: 26px;
+    -webkit-box-align: end;
+    -webkit-align-items: flex-end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  footer .mfooter_basement .copyrights a {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    color: #FFFFFF;
+  }
+  footer .mfooter_basement .year p {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 21px;
+    color: #FFFFFF;
+  }
 }
