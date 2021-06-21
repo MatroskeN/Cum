@@ -188,7 +188,8 @@ main .banner {
   width: 100%;
   position: relative;
   height: 807px;
-  margin-bottom: 122px;
+  margin-bottom: 62px;
+  overflow: hidden;
 }
 main .banner .banner_title {
   max-width: 780px;
@@ -207,7 +208,7 @@ main .banner .banner_title {
 }
 main .banner .banner_mountain {
   position: absolute;
-  width: 110%;
+  width: 100%;
   height: 110%;
   top: 0;
   left: 0;
@@ -222,8 +223,8 @@ main .banner .banner_sea {
   height: 110%;
   top: 0;
   left: 0;
-  background: url(../img/parallax/water.png) center;
-  background-repeat: repeat-x;
+  background-image: url(../img/parallax/water.png);
+  background-position: left center;
   z-index: 1;
   overflow: hidden;
 }

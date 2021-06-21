@@ -20,20 +20,20 @@ $( document ).ready(function() {
     let y = e.clientY / window.innerHeight;  
     bg.style.transform = 'translate(-' + x * 30 + 'px)';
 });
-//mouse-parallax-bg-sea
-// let bg1 = document.querySelector('.mouse-parallax-bg-sea');
-//   window.addEventListener('mousemove', function(e) {
-//     let x = e.clientX / window.innerWidth;
-//     let y = e.clientY / window.innerHeight;  
-//     bg1.style.transform = 'translate(-' + x * 10 + 'px)';
-// });
-//mouse-parallax-bg-rock
-let bg2 = document.querySelector('.mouse-parallax-bg-rock');
+// //mouse-parallax-bg-sea
+let bg1 = document.querySelector('.mouse-parallax-bg-sea');
   window.addEventListener('mousemove', function(e) {
     let x = e.clientX / window.innerWidth;
     let y = e.clientY / window.innerHeight;  
-    bg2.style.transform = 'translate(-' + x * 10 + 'px)';
+    bg1.style.transform = 'translate(-' + x * 10 + 'px)';
 });
+// //mouse-parallax-bg-rock
+// let bg2 = document.querySelector('.mouse-parallax-bg-rock');
+//   window.addEventListener('mousemove', function(e) {
+//     let x = e.clientX / window.innerWidth;
+//     let y = e.clientY / window.innerHeight;  
+//     bg2.style.transform = 'translate(-' + x * 10 + 'px)';
+// });
 
 $('.lang_button').on("click", function () {
   $('.fade_up_panel').css({'opacity':'1'});
