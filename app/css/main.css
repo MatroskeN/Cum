@@ -68,6 +68,81 @@ header .header_wrapper .header__menu a img {
   -o-transition: all 0.6s;
   transition: all 0.6s;
 }
+header .header_wrapper .header__lang_panel {
+  position: relative;
+}
+header .header_wrapper .header__lang_panel .fade_up_panel {
+  position: absolute;
+  background: url(../img/Union.png) no-repeat center;
+  width: 179px;
+  height: 90px;
+  left: -140px;
+  opacity: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s;
+  color: #58595B;
+}
+header .header_wrapper .header__lang_panel .fade_up_panel .first_lang {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 25px 0 6px 0;
+  margin: 0 8px 0 18px;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-bottom: 0.5px solid #c4c4c4;
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s;
+  cursor: pointer;
+}
+header .header_wrapper .header__lang_panel .fade_up_panel .first_lang:hover {
+  color: #4C86A0;
+}
+header .header_wrapper .header__lang_panel .fade_up_panel .second_lang {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 11px 8px 6px 18px;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s;
+  cursor: pointer;
+}
+header .header_wrapper .header__lang_panel .fade_up_panel .second_lang:hover {
+  color: #4C86A0;
+}
 header .header_wrapper .lang_button {
   border: none;
   outline: none;
@@ -110,12 +185,10 @@ header .header_wrapper .lang_button:hover p {
   color: #000;
 }
 main .banner {
-  background: url(../img/main_banner.png) no-repeat center;
-  background-size: cover;
   width: 100%;
   position: relative;
   height: 807px;
-  margin-bottom: 62px;
+  margin-bottom: 122px;
 }
 main .banner .banner_title {
   max-width: 780px;
@@ -129,6 +202,42 @@ main .banner .banner_title {
   color: #FFFFFF;
   margin-left: 20vw;
   padding-top: 356px;
+  position: relative;
+  z-index: 10;
+}
+main .banner .banner_mountain {
+  position: absolute;
+  width: 110%;
+  height: 110%;
+  top: 0;
+  left: 0;
+  background-repeat: repeat-x;
+  background: url(../img/parallax/mountain.png) no-repeat center;
+  z-index: 0;
+  overflow: hidden;
+}
+main .banner .banner_sea {
+  position: absolute;
+  width: 110%;
+  height: 110%;
+  top: 0;
+  left: 0;
+  background: url(../img/parallax/water.png) center;
+  background-repeat: repeat-x;
+  z-index: 1;
+  overflow: hidden;
+}
+main .banner .banner_ship {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: url(../img/parallax/ship.png) no-repeat center;
+  z-index: 2;
+  -webkit-transition: all 0.1s ease;
+  -o-transition: all 0.1s ease;
+  transition: all 0.1s ease;
 }
 main .about {
   max-width: 1200px;
@@ -152,6 +261,80 @@ main .about .about_container {
 main .about .about_container .about_slider img {
   width: 582px;
   height: 563px;
+}
+main .about .about_container .about_navigation {
+  position: absolute;
+  z-index: 6;
+  bottom: 0;
+  right: 0;
+  width: 80px;
+  height: 40px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+main .about .about_container .about_navigation .next_about {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+  width: 40px;
+  height: 40px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: rgba(255, 255, 255, 0.8);
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s;
+}
+main .about .about_container .about_navigation .next_about:hover {
+  background: #4C86A0;
+}
+main .about .about_container .about_navigation .next_about:hover svg path {
+  fill: rgba(255, 255, 255, 0.8);
+}
+main .about .about_container .about_navigation .prev_about {
+  width: 40px;
+  height: 40px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: rgba(255, 255, 255, 0.8);
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s;
+}
+main .about .about_container .about_navigation .prev_about:hover {
+  background: #4C86A0;
+}
+main .about .about_container .about_navigation .prev_about:hover svg path {
+  fill: rgba(255, 255, 255, 0.8);
 }
 main .about .about_text {
   margin-top: 66px;
@@ -197,7 +380,25 @@ main .about .about_text .about_more {
   color: #58595B;
 }
 main .about .about_text .about_more p {
-  margin-right: 9px;
+  padding-right: 9px;
+  position: relative;
+  z-index: 2;
+  background: #fff;
+}
+main .about .about_text .about_more svg {
+  position: relative;
+  z-index: 1;
+  -webkit-transform: translateX(-18px);
+      -ms-transform: translateX(-18px);
+          transform: translateX(-18px);
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s;
+}
+main .about .about_text .about_more:hover svg {
+  -webkit-transform: translateX(0px);
+      -ms-transform: translateX(0px);
+          transform: translateX(0px);
 }
 main .about .about_text .about_title h2 {
   font-family: Roboto;
@@ -278,12 +479,60 @@ main .manafacture .manafacture_wrapper .manafacture_content .manafacture_swiper 
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background: rgba(255, 255, 255, 0.8);
 }
 main .manafacture .manafacture_wrapper .manafacture_content .manafacture_swiper .manafacture_navigation .next_arrow {
   -webkit-transform: rotateY(180deg);
           transform: rotateY(180deg);
-  margin-left: 34px;
+  width: 40px;
+  height: 40px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: rgba(255, 255, 255, 0.8);
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s;
+}
+main .manafacture .manafacture_wrapper .manafacture_content .manafacture_swiper .manafacture_navigation .next_arrow:hover {
+  background: #4C86A0;
+}
+main .manafacture .manafacture_wrapper .manafacture_content .manafacture_swiper .manafacture_navigation .next_arrow:hover svg path {
+  fill: rgba(255, 255, 255, 0.8);
+}
+main .manafacture .manafacture_wrapper .manafacture_content .manafacture_swiper .manafacture_navigation .prev_arrow {
+  width: 40px;
+  height: 40px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: rgba(255, 255, 255, 0.8);
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s;
+}
+main .manafacture .manafacture_wrapper .manafacture_content .manafacture_swiper .manafacture_navigation .prev_arrow:hover {
+  background: #4C86A0;
+}
+main .manafacture .manafacture_wrapper .manafacture_content .manafacture_swiper .manafacture_navigation .prev_arrow:hover svg path {
+  fill: rgba(255, 255, 255, 0.8);
 }
 main .manafacture .manafacture_wrapper .manafacture_content .manafacture_swiper .swiper-slide-active {
   width: 718px !important;
@@ -414,6 +663,8 @@ main .product .product_wrapper {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  position: relative;
+  z-index: 2;
 }
 main .product .product_wrapper .product_pics {
   display: -webkit-box;
@@ -659,6 +910,8 @@ main .contact .contact_map {
   position: absolute;
   right: 0;
   top: 160px;
+  width: 50%;
+  overflow-x: hidden;
 }
 main .contact .contact_map .world_time {
   position: absolute;

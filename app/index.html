@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />    
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
@@ -47,29 +47,61 @@
             </div>
             <div class="header__lang_panel">
                 <button class="lang_button">
-                    <p>Ru</p>
+                    <p class="lang_data">Ru</p>
                     <svg width="9" height="6" viewBox="0 0 9 6" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M4.33013 6L0 0L8.66025 7.57103e-07L4.33013 6Z" fill="#4C86A0"/>
                     </svg>
                 </button>
+                <div class="fade_up_panel">
+                    <div class="first_lang">
+                        <img src="img/ru.png" alt="ru">
+                        <p>Русский язык</p>
+                    </div>
+                    <div class="second_lang">
+                        <img src="img/eng.png" alt="eng">
+                        <p>English language</p>
+                    </div>
+                </div>
             </div>
         </div>
     </header>
     <main>
-        <div class="banner" name="header">
-            <h1 class="banner_title">
+        <div class="banner mouse-parallax mouse-parallax-bg-rock" name="header">
+            <div class="banner_mountain">
+
+            </div>
+            <h1 class="banner_title" data-aos="fade-up" data-aos-duration="1500">
                 Камчатское рыбодобывающее <br>
                 и рыбоперерабатывающее предприятие
             </h1>
+            <div class="banner_sea mouse-parallax-bg-sea"></div>
+            <div class="banner_ship mouse-parallax-bg"></div>
         </div>
         <div class="about">
             <div class="swiper-container about_container" id="slideMain">
+                <div class="about_navigation">
+                    <div class="prev_about">
+                        <svg width="10" height="19" viewBox="0 0 10 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8.2718 0.314635C8.65032 -0.0875385 9.28319 -0.106717 9.68536 0.2718C10.0875 0.650316 10.1067 1.28319 9.7282 1.68536L8.2718 0.314635ZM1 9.5L0.2718 10.1854C-0.0906 9.80031 -0.0906 9.19969 0.2718 8.81464L1 9.5ZM9.7282 17.3146C10.1067 17.7168 10.0875 18.3497 9.68536 18.7282C9.28319 19.1067 8.65032 19.0875 8.2718 18.6854L9.7282 17.3146ZM9.7282 1.68536L1.7282 10.1854L0.2718 8.81464L8.2718 0.314635L9.7282 1.68536ZM1.7282 8.81464L9.7282 17.3146L8.2718 18.6854L0.2718 10.1854L1.7282 8.81464Z" fill="#4C86A0"/>
+                        </svg>
+                    </div>
+                    <div class="next_about">
+                        <svg width="10" height="19" viewBox="0 0 10 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8.2718 0.314635C8.65032 -0.0875385 9.28319 -0.106717 9.68536 0.2718C10.0875 0.650316 10.1067 1.28319 9.7282 1.68536L8.2718 0.314635ZM1 9.5L0.2718 10.1854C-0.0906 9.80031 -0.0906 9.19969 0.2718 8.81464L1 9.5ZM9.7282 17.3146C10.1067 17.7168 10.0875 18.3497 9.68536 18.7282C9.28319 19.1067 8.65032 19.0875 8.2718 18.6854L9.7282 17.3146ZM9.7282 1.68536L1.7282 10.1854L0.2718 8.81464L8.2718 0.314635L9.7282 1.68536ZM1.7282 8.81464L9.7282 17.3146L8.2718 18.6854L0.2718 10.1854L1.7282 8.81464Z" fill="#4C86A0"/>
+                        </svg>
+                    </div>
+                </div>
                 <div class="swiper-wrapper">
                   <div class="swiper-slide slider">
                     <div class="about_slider">
                         <img src="img/slider1.png" alt="slider">
                     </div>
-                  </div> 
+                  </div>
+                  <div class="swiper-slide slider">
+                    <div class="about_slider">
+                        <img src="img/slider1.png" alt="slider">
+                    </div>
+                  </div>
                 </div>
                 <!-- Add Scrollbar -->
                   <div class="swiper-scrollbar"></div>
@@ -78,29 +110,31 @@
                 <div class="about_box">
 
                 </div>
-                <div class="about_title">
+                <div class="about_title" data-aos="fade-up" data-aos-duration="1500">
                     <h2>О компании</h2>
                     <hr>
                     <p>
                         Работаем с 1999 года
                     </p>
                 </div>
-                <div class="about_description">
+                <div class="about_description" data-aos="fade-up" data-aos-duration="1500">
                     Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного текста рыбы на русском языке, а начинающему оратору отточить навык публичных выступлений в домашних условиях. При создании генератора мы использовали небезизвестный универсальный код речей. Текст генерируется абзацами случайным образом от двух до десяти предложений в абзаце.
                 </div>
                 <a href="#" class="about_more">
                     <p>
                         Подробнее
                     </p>
-                    <svg width="8" height="11" viewBox="0 0 8 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg width="26" height="11" viewBox="0 0 26 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M25.5 5.5L19 1V10L25.5 5.5Z" stroke="#58595B" stroke-linecap="round" stroke-linejoin="round"/>
                         <path d="M7.5 5.5L1 1V10L7.5 5.5Z" stroke="#58595B" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M8 5.5L19 1V10L8 5.5Z" stroke="#58595B" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
                 </a>
             </div>
         </div>
         <div class="manafacture">
             <div class="manafacture_wrapper">
-                <h2 class="manafacture_title">
+                <h2 class="manafacture_title" data-aos="fade-up" data-aos-duration="1500">
                     Наше производство
                 </h2>
                 <div class="manafacture_content">
@@ -153,7 +187,7 @@
                 </div>
             </div>
             <img src="img/vawe.png" alt="vawe" class="manafacture_vawe">
-            <div class="manafacture_text">
+            <div class="manafacture_text" data-aos="fade-up" data-aos-duration="1500">
                 <img src="img/quality.png" alt="quality">
                 <p>Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного текста рыбы на русском языке, а начинающему оратору отточить навык публичных выступлений в домашних условиях. При создании генератора мы использовали небезизвестный универсальный код речей. Текст генерируется абзацами случайным образом.</p>
             </div>
@@ -192,14 +226,14 @@
                     </div>
                 </div>
                 <div class="product_info">
-                    <h2 class="product_title">
+                    <h2 class="product_title" data-aos="fade-up" data-aos-duration="1500">
                         Продукция
                     </h2>
                     <hr>
-                    <div class="product_subtitle">
+                    <div class="product_subtitle" data-aos="fade-up" data-aos-duration="1500">
                         Собственное Камчатское производство, натуральный состав, высокое качество. 
                     </div>
-                    <div class="product_text">
+                    <div class="product_text" data-aos="fade-up" data-aos-duration="1500">
                         <p>
                             Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного текста рыбы на русском языке, а начинающему оратору отточить навык публичных выступлений в домашних условиях. При создании генератора мы использовали небезизвестный универсальный код речей. Текст генерируется абзацами случайным образом.
                         </p>
@@ -312,6 +346,10 @@
         </div>
     </footer>
     <!-- scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
     <script src="js/main.js"></script>
     <script src="js/libs.min.js"></script>
 </body>

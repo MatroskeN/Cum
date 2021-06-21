@@ -52,6 +52,50 @@ header{
                 }
             }
         }
+        .header__lang_panel{
+            position: relative;
+            .fade_up_panel{
+                position: absolute;
+                background:url(../img/Union.png) no-repeat center;
+                width: 179px;
+                height: 90px;
+                left: -140px;
+                opacity: 0;
+                display: flex;
+                flex-direction: column;
+                font-family: Roboto;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 16px;
+                line-height: 19px;
+                transition: all 0.4s;
+                color: #58595B;
+                .first_lang{
+                    display: flex;
+                    padding: 25px 0 6px 0;
+                    margin: 0 8px 0 18px;
+                    align-items: center;
+                    justify-content: space-between;
+                    border-bottom: 0.5px solid #c4c4c4;
+                    transition: all 0.4s;
+                    cursor: pointer;
+                    &:hover{
+                        color: #4C86A0;
+                    }
+                }
+                .second_lang{
+                    display: flex;
+                    margin: 11px 8px 6px 18px;
+                    align-items: center;
+                    justify-content: space-between;
+                    transition: all 0.4s;
+                    cursor: pointer;
+                    &:hover{
+                        color: #4C86A0;
+                    }
+                }
+            }
+        }
         .lang_button{
             border: none;
             outline: none;
@@ -91,12 +135,10 @@ header{
 
 main{
     .banner{
-        background: url(../img/main_banner.png) no-repeat center;
-        background-size: cover;
         width: 100%;
         position: relative;
         height: 807px;
-        margin-bottom: 62px;
+        margin-bottom: 122px;
         .banner_title{
             max-width: 780px;
             font-family: Roboto;
@@ -109,6 +151,40 @@ main{
             color: #FFFFFF;
             margin-left: 20vw;
             padding-top: 356px;
+            position: relative;
+            z-index: 10;
+        }
+        .banner_mountain{
+            position: absolute;
+            width: 110%;
+            height: 110%;
+            top: 0;
+            left: 0;
+            background-repeat: repeat-x;
+            background: url(../img/parallax/mountain.png) no-repeat center;
+            z-index: 0;
+            overflow: hidden;
+        }
+        .banner_sea{
+            position: absolute;
+            width: 110%;
+            height: 110%;
+            top: 0;
+            left: 0;
+            background: url(../img/parallax/water.png) center;
+            background-repeat: repeat-x;
+            z-index: 1;
+            overflow: hidden;
+        }
+        .banner_ship{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background: url(../img/parallax/ship.png) no-repeat center;
+            z-index: 2;
+            transition: all 0.1s ease; 
         }
     }
     .about{
@@ -126,6 +202,52 @@ main{
                 img{
                     width: 582px;
                     height: 563px; 
+                }
+            }
+            .about_navigation{
+                position: absolute;
+                z-index: 6;
+                bottom: 0;
+                right: 0;
+                width: 80px;
+                height: 40px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                .next_about{
+                    transform: rotateY(180deg);
+                    width: 40px;
+                    height: 40px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    background: rgba(255, 255, 255, 0.8);
+                    transition: all 0.4s;
+                    &:hover{
+                        background: #4C86A0;
+                        svg{
+                            path{
+                                fill: rgba(255, 255, 255, 0.8);;
+                            }
+                        }
+                    }
+                }
+                .prev_about{
+                    width: 40px;
+                    height: 40px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    background: rgba(255, 255, 255, 0.8);
+                    transition: all 0.4s;
+                    &:hover{
+                        background: #4C86A0;
+                        svg{
+                            path{
+                                fill: rgba(255, 255, 255, 0.8);;
+                            }
+                        }
+                    }
                 }
             }
         }
@@ -168,7 +290,21 @@ main{
 
                 color: #58595B;
                 p{
-                    margin-right: 9px;
+                    padding-right: 9px;
+                    position: relative;
+                    z-index: 2;
+                    background:#fff;
+                }
+                svg{
+                    position: relative;
+                    z-index: 1;
+                    transform: translateX(-18px);
+                    transition: all 0.4s;
+                }
+                &:hover{
+                    svg{
+                        transform: translateX(0px);
+                    }
                 }
             }
             .about_title{
@@ -240,10 +376,40 @@ main{
                         display: flex;
                         align-items: center;
                         justify-content: center;
-                        background: rgba(255, 255, 255, 0.8);
                         .next_arrow{
                             transform: rotateY(180deg);
-                            margin-left:34px;
+                            width: 40px;
+                            height: 40px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            background: rgba(255, 255, 255, 0.8);
+                            transition: all 0.4s;
+                            &:hover{
+                                background: #4C86A0;
+                                svg{
+                                    path{
+                                        fill: rgba(255, 255, 255, 0.8);;
+                                    }
+                                }
+                            }
+                        }
+                        .prev_arrow{
+                            width: 40px;
+                            height: 40px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            background: rgba(255, 255, 255, 0.8);
+                            transition: all 0.4s;
+                            &:hover{
+                                background: #4C86A0;
+                                svg{
+                                    path{
+                                        fill: rgba(255, 255, 255, 0.8);;
+                                    }
+                                }
+                            }
                         }
                     }
                     .swiper-slide-active{
@@ -362,6 +528,8 @@ main{
             width: 100%;
             margin: 0 auto;
             display:flex;
+            position: relative;
+            z-index: 2;
             .product_pics{
                 display: flex;
                 flex-flow: row wrap;
@@ -582,6 +750,8 @@ main{
             position: absolute;
             right: 0;
             top:160px;
+            width: 50%;
+            overflow-x: hidden;
             .world_time{
                 position: absolute;
                 left: -224px;
