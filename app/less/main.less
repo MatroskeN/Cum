@@ -166,47 +166,59 @@ main{
                 text-transform: uppercase;
                 color: #FFFFFF;
                 margin-left: 0;
-                padding-top: 356px;
+                padding-top: 40vh;
                 position: relative;
                 z-index: 10;
             }
         }
         .banner_mountain{
             position: absolute;
-            width: 100%;
-            height: 110%;
-            top: 0;
-            left: 0;
-            background-repeat: repeat-x;
-            background: url(../img/parallax/mountain.png) no-repeat center;
-            z-index: 0;
-            overflow: hidden;
-        }
-        .banner_sea{
-            position: absolute;
-            width: 110%;
-            height: 110%;
-            top: 0;
-            left: 0;
-            background-image: url(../img/parallax/water.png);
-            background-position: left center;
-            z-index: 1;
-            overflow: hidden;
-        }
-        .banner_ship{
-            position: absolute;
-            width: 100%;
+            width: 100vw;
             height: 100%;
             top: 0;
             left: 0;
-            background: url(../img/parallax/ship.png) no-repeat center;
+            background-repeat: repeat-x;
+            // background: url(../img/parallax/mountain.png) no-repeat center;
+            z-index: 0;
+            overflow: hidden;
+            img{
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .banner_sea{
+            position: absolute;
+            width: 100vw;
+            height: 100%;
+            top: 0;
+            left: 0;
+            // background-image: url(../img/parallax/water.png);
+            background-position: left center;
+            z-index: 1;
+            overflow: hidden;
+            img{
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .banner_ship{
+            position: absolute;
+            width: 100vw;
+            height: 100%;
+            bottom: 65px;
+            right: -5vw;
+            background: url(../img/parallax/ship.png) no-repeat right;
             z-index: 2;
-            transition: all 0.1s ease; 
+            transition: all 0.1s ease;
+            img{
+                width: 100vw;
+                height: 100%;
+            }
         }
         .scroll_arrow{
             position: absolute;
             z-index: 10;
-            bottom: 43px;
+            bottom: 10vh;
             left: 0;
             right: 0;
             margin: auto;
@@ -223,6 +235,9 @@ main{
               transform: translate3d(0, -50%, 0);
             }
           }
+    }
+    @media(max-width:1600px){
+        
     }
     .about{
         max-width: 1200px;
@@ -928,7 +943,7 @@ footer{
         }
     }
 }
-.burger,.mbanner,.mbanner_title,.mproduct_title,.mhr,.mproduct_btn,.mfooter_wrapper,.mfooter_basement{
+.burger,.mbanner,.mbanner_title,.mproduct_title,.mhr,.mproduct_btn,.mfooter_wrapper,.mfooter_basement,.mheader_wrapper,.xclose{
     display: none;
 }
 @media(max-width:1200px){
@@ -941,6 +956,47 @@ footer{
             .burger{
                 display: block;
             }
+        }
+    }
+    .opened{
+        background: #FFFFFF;
+        height: 100vh;
+        .header_wrapper{
+            
+        }
+        .mheader_wrapper{
+            padding-top: 60px;
+            display: flex;
+            position: relative;
+            justify-content: center;
+            .mob_vawe{
+                position: absolute;
+                left: 0;
+                top: 50px;
+                width: 100%;
+                z-index: 0;
+            }
+                .mheader_menu{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    position: relative;
+                    z-index: 1;
+                    .mitem{
+                        font-family: Roboto;
+                        font-style: normal;
+                        font-weight: 500;
+                        font-size: 18px;
+                        line-height: 21px;
+
+                        color: #141414;
+                        margin-bottom: 64px;
+                        transition: all 0.4s;
+                        &:hover{
+                            color: #4C86A0;
+                        }
+                    }
+                }
         }
     }
     main{
@@ -1018,8 +1074,10 @@ footer{
 @media(max-width:768px){
 
     header{
+
         .header_wrapper{
-            max-width: 320px;
+            padding-top: 11px;
+            max-width: 300px;
         }
     }
     main{
@@ -1054,7 +1112,7 @@ footer{
         }
 
         .about{
-            max-width: 320px;
+            max-width: 300px;
             padding-bottom: 33px;
             .about_container{
                 width: 290px;
@@ -1120,9 +1178,9 @@ footer{
         }
         .manafacture{
             height: 640px;
-            overflow-x: hidden;
+            overflow: hidden;
             .manafacture_wrapper{
-                max-width: 320px;
+                max-width: 300px;
                 .manafacture_title{
                     font-family: Roboto;
                     font-style: normal;
@@ -1141,12 +1199,13 @@ footer{
                             top: unset;
                             left: unset;
                             bottom: 0;
-                            right: 41px;
+                            right: 21px;
                         }
                         .swiper-slide-active{
                             width: 279px !important;
                             height: 200px !important;
                             margin-right: 11px;
+
                             .manafacture_slide{
                                 width: 279px !important;
                                 height: 200px !important;
@@ -1208,8 +1267,12 @@ footer{
             }
         }
         .product{
+            padding-top: 26px;
+            .product_vawe{
+                display: none;
+            }
             .product_wrapper{
-                max-width: 320px;
+                max-width: 300px;
                 flex-direction: column;
                 .mproduct_title{
                     display: flex;
@@ -1236,6 +1299,16 @@ footer{
                         height: 140px;
                         margin-right: 6px;
                         margin-bottom: 5px;
+                        .item_sun{
+                            top: 46px;
+                        }
+                        &:hover{
+                            .item_sun{
+                                -webkit-transform: scale(7, 7);
+                                -ms-transform: scale(7, 7);
+                                transform: scale(7, 7);
+                            }
+                        }
                         img{
                             max-width: 104px;
                             max-height: 60px;
@@ -1337,7 +1410,7 @@ footer{
                 padding-top: 20px;
                 margin-bottom: unset;
                 text-align: left;
-                max-width: 320px;
+                max-width: 300px;
                 margin: 0 auto;
             }
             .mhr{
@@ -1348,7 +1421,7 @@ footer{
                 margin: 10px 0 15px 0;
             }
             .contact_wrapper{
-                max-width: 320px;
+                max-width: 300px;
                 .contact_info{
                     max-width: 320px;
                     .contact_item{
@@ -1362,8 +1435,11 @@ footer{
                     }
                     .contact_firm{
                         p{
-                            font-size: 14px;
+                            font-size: 13px;
                             line-height: 16px;
+                        }
+                        img{
+                            width: 40px;
                         }
                     }
                 }
@@ -1372,20 +1448,21 @@ footer{
                 padding-bottom: 40px;
                 .world_time{
                     left: unset;
-                    right: 0;
+                    right: 15px;
                     top: 300px;
                 }
             }
         }
     }
     footer{
-        height: 579px;
+        height: 100vh;
         .footer_ships{
             right: -100%;
+            bottom: 85px;
         }
         overflow-x: hidden;
         .footer_wrapper{
-            max-width: 320px;
+            max-width: 300px;
             display: flex;
             justify-content: space-between;
             .footer_logo{
@@ -1403,7 +1480,7 @@ footer{
         .mfooter_wrapper{
             display: block;
             .footer_menu{
-                max-width: 320px;
+                max-width: 300px;
                 height: 120px;
                 margin: 0 auto;
                 margin-top: 31px;
@@ -1428,12 +1505,15 @@ footer{
         }
         .mfooter_basement{
             display: flex;
-            max-width: 320px;
-            margin: 0 auto;
-            margin-top: 100%;
-            margin-bottom: 26px;
+            max-width: 300px;
+            position: absolute;
+            bottom: 25px;
+            left: 0;
+            right: 0;
+            margin: auto;
             align-items: flex-end;
             justify-content: space-between;
+            z-index: 5;
             .copyrights{
                 a{
                     font-family: Roboto;

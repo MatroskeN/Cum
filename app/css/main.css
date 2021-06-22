@@ -217,48 +217,58 @@ main .banner .banner_wrapper .banner_title {
   text-transform: uppercase;
   color: #FFFFFF;
   margin-left: 0;
-  padding-top: 356px;
+  padding-top: 40vh;
   position: relative;
   z-index: 10;
 }
 main .banner .banner_mountain {
   position: absolute;
-  width: 100%;
-  height: 110%;
+  width: 100vw;
+  height: 100%;
   top: 0;
   left: 0;
   background-repeat: repeat-x;
-  background: url(../img/parallax/mountain.png) no-repeat center;
   z-index: 0;
   overflow: hidden;
 }
+main .banner .banner_mountain img {
+  width: 100%;
+  height: 100%;
+}
 main .banner .banner_sea {
   position: absolute;
-  width: 110%;
-  height: 110%;
+  width: 100vw;
+  height: 100%;
   top: 0;
   left: 0;
-  background-image: url(../img/parallax/water.png);
   background-position: left center;
   z-index: 1;
   overflow: hidden;
 }
-main .banner .banner_ship {
-  position: absolute;
+main .banner .banner_sea img {
   width: 100%;
   height: 100%;
-  top: 0;
-  left: 0;
-  background: url(../img/parallax/ship.png) no-repeat center;
+}
+main .banner .banner_ship {
+  position: absolute;
+  width: 100vw;
+  height: 100%;
+  bottom: 65px;
+  right: -5vw;
+  background: url(../img/parallax/ship.png) no-repeat right;
   z-index: 2;
   -webkit-transition: all 0.1s ease;
   -o-transition: all 0.1s ease;
   transition: all 0.1s ease;
 }
+main .banner .banner_ship img {
+  width: 100vw;
+  height: 100%;
+}
 main .banner .scroll_arrow {
   position: absolute;
   z-index: 10;
-  bottom: 43px;
+  bottom: 10vh;
   left: 0;
   right: 0;
   margin: auto;
@@ -1118,7 +1128,9 @@ footer .footer_basement .year {
 .mhr,
 .mproduct_btn,
 .mfooter_wrapper,
-.mfooter_basement {
+.mfooter_basement,
+.mheader_wrapper,
+.xclose {
   display: none;
 }
 @media (max-width: 1200px) {
@@ -1130,6 +1142,61 @@ footer .footer_basement .year {
   }
   header .header_wrapper .burger {
     display: block;
+  }
+  .opened {
+    background: #FFFFFF;
+    height: 100vh;
+  }
+  .opened .mheader_wrapper {
+    padding-top: 60px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .opened .mheader_wrapper .mob_vawe {
+    position: absolute;
+    left: 0;
+    top: 50px;
+    width: 100%;
+    z-index: 0;
+  }
+  .opened .mheader_wrapper .mheader_menu {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: relative;
+    z-index: 1;
+  }
+  .opened .mheader_wrapper .mheader_menu .mitem {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    color: #141414;
+    margin-bottom: 64px;
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    transition: all 0.4s;
+  }
+  .opened .mheader_wrapper .mheader_menu .mitem:hover {
+    color: #4C86A0;
   }
   main .banner .banner_wrapper .banner_title {
     margin: 0 auto !important;
@@ -1204,7 +1271,8 @@ footer .footer_basement .year {
 }
 @media (max-width: 768px) {
   header .header_wrapper {
-    max-width: 320px;
+    padding-top: 11px;
+    max-width: 300px;
   }
   main .banner {
     display: none;
@@ -1234,7 +1302,7 @@ footer .footer_basement .year {
     color: #4C86A0;
   }
   main .about {
-    max-width: 320px;
+    max-width: 300px;
     padding-bottom: 33px;
   }
   main .about .about_container {
@@ -1291,10 +1359,10 @@ footer .footer_basement .year {
   }
   main .manafacture {
     height: 640px;
-    overflow-x: hidden;
+    overflow: hidden;
   }
   main .manafacture .manafacture_wrapper {
-    max-width: 320px;
+    max-width: 300px;
   }
   main .manafacture .manafacture_wrapper .manafacture_title {
     font-family: Roboto;
@@ -1311,7 +1379,7 @@ footer .footer_basement .year {
     top: unset;
     left: unset;
     bottom: 0;
-    right: 41px;
+    right: 21px;
   }
   main .manafacture .manafacture_wrapper .manafacture_content .manafacture_swiper .swiper-slide-active {
     width: 279px !important;
@@ -1372,8 +1440,14 @@ footer .footer_basement .year {
   main .manafacture .manafacture_vawe2 {
     bottom: -87px;
   }
+  main .product {
+    padding-top: 26px;
+  }
+  main .product .product_vawe {
+    display: none;
+  }
   main .product .product_wrapper {
-    max-width: 320px;
+    max-width: 300px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -webkit-flex-direction: column;
@@ -1411,6 +1485,14 @@ footer .footer_basement .year {
     height: 140px;
     margin-right: 6px;
     margin-bottom: 5px;
+  }
+  main .product .product_wrapper .product_pics .product_item .item_sun {
+    top: 46px;
+  }
+  main .product .product_wrapper .product_pics .product_item:hover .item_sun {
+    -webkit-transform: scale(7, 7);
+    -ms-transform: scale(7, 7);
+    transform: scale(7, 7);
   }
   main .product .product_wrapper .product_pics .product_item img {
     max-width: 104px;
@@ -1509,7 +1591,7 @@ footer .footer_basement .year {
     padding-top: 20px;
     margin-bottom: unset;
     text-align: left;
-    max-width: 320px;
+    max-width: 300px;
     margin: 0 auto;
   }
   main .contact .mhr {
@@ -1523,7 +1605,7 @@ footer .footer_basement .year {
     margin: 10px 0 15px 0;
   }
   main .contact .contact_wrapper {
-    max-width: 320px;
+    max-width: 300px;
   }
   main .contact .contact_wrapper .contact_info {
     max-width: 320px;
@@ -1537,26 +1619,30 @@ footer .footer_basement .year {
     font-size: 14px;
   }
   main .contact .contact_wrapper .contact_info .contact_firm p {
-    font-size: 14px;
+    font-size: 13px;
     line-height: 16px;
+  }
+  main .contact .contact_wrapper .contact_info .contact_firm img {
+    width: 40px;
   }
   main .contact .contact_map {
     padding-bottom: 40px;
   }
   main .contact .contact_map .world_time {
     left: unset;
-    right: 0;
+    right: 15px;
     top: 300px;
   }
   footer {
-    height: 579px;
+    height: 100vh;
     overflow-x: hidden;
   }
   footer .footer_ships {
     right: -100%;
+    bottom: 85px;
   }
   footer .footer_wrapper {
-    max-width: 320px;
+    max-width: 300px;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -1587,7 +1673,7 @@ footer .footer_basement .year {
     display: block;
   }
   footer .mfooter_wrapper .footer_menu {
-    max-width: 320px;
+    max-width: 300px;
     height: 120px;
     margin: 0 auto;
     margin-top: 31px;
@@ -1622,10 +1708,12 @@ footer .footer_basement .year {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    max-width: 320px;
-    margin: 0 auto;
-    margin-top: 100%;
-    margin-bottom: 26px;
+    max-width: 300px;
+    position: absolute;
+    bottom: 25px;
+    left: 0;
+    right: 0;
+    margin: auto;
     -webkit-box-align: end;
     -webkit-align-items: flex-end;
         -ms-flex-align: end;
@@ -1634,6 +1722,7 @@ footer .footer_basement .year {
     -webkit-justify-content: space-between;
         -ms-flex-pack: justify;
             justify-content: space-between;
+    z-index: 5;
   }
   footer .mfooter_basement .copyrights a {
     font-family: Roboto;

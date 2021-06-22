@@ -7,8 +7,9 @@ $( document ).ready(function() {
     },
   });
   var swiper1 = new Swiper('.manafacture_swiper', {
-    slidesPerView: 'auto',
+    slidesPerView: '1',
     speed: 1000,
+    loop:true,
     navigation: {
       nextEl: '.next_arrow',
       prevEl: '.prev_arrow',
@@ -52,6 +53,17 @@ $('.second_lang').on("click", function () {
   $('.fade_up_panel').css({'opacity':'0'});
 });
 
+$('.burger').on("click",function(){
+  $('#head').addClass("opened");
+  $(this).hide();
+  $('.xclose').show();
+})
+$('.xclose').on("click",function(){
+  $('#head').removeClass("opened");
+  $(this).hide();
+  $('.burger').show();
+})
+
 
 //headerscroll
 var scroll = 0;
@@ -59,7 +71,6 @@ var scroll = 0;
 $(window).on("scroll", function(){
     scroll = window.pageYOffset || (document.documentElement.clientHeight ? document.documentElement.scrollTop : document.body.scrollTop);
     if ((scroll + 120) > $(".banner").height()) { // высота банера
-        console.log('height')
         $('#head').addClass("scroll-header");
     }
     if ((scroll + 120) < $(".banner").height()){
