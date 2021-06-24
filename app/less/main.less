@@ -23,7 +23,9 @@ header{
             display: flex;
             padding-top: 20px;
             a{
+                position: relative;
                 width: auto;
+                text-align: center;
                 min-width: 100px;
                 margin-right: 44px;
                 font-family: Roboto;
@@ -42,7 +44,7 @@ header{
                 &:hover{
                     color: #4C86A0;
                     img{
-                        width:100%;
+                        width: 100%;
                     }
                 }
                 img{
@@ -57,9 +59,9 @@ header{
             position: relative;
             .fade_up_panel{
                 position: absolute;
-                background:url(../img/Union.png) no-repeat center;
+                background:url(../img/Union.svg) no-repeat center;
                 width: 179px;
-                height: 90px;
+                height: 105px;
                 left: -140px;
                 opacity: 0;
                 display: flex;
@@ -73,7 +75,7 @@ header{
                 color: #58595B;
                 .first_lang{
                     display: flex;
-                    padding: 25px 0 6px 0;
+                    padding: 20px 2px 6px 0;
                     margin: 0 8px 0 18px;
                     align-items: center;
                     justify-content: space-between;
@@ -174,16 +176,19 @@ main{
         .banner_mountain{
             position: absolute;
             width: 100vw;
-            height: 100%;
+            height: 105%;
             top: 0;
             left: 0;
             background-repeat: repeat-x;
+            background-position: left center;
             // background: url(../img/parallax/mountain.png) no-repeat center;
             z-index: 0;
-            overflow: hidden;
             img{
-                width: 100%;
+                position: absolute;
+                width: 110%;
                 height: 100%;
+                top: 0;
+                right: 0;
             }
         }
         .banner_sea{
@@ -496,6 +501,7 @@ main{
                         position: relative;
                         width: 410px;
                         height: 240px;
+                        transition: all 0.4s;
                         .slide_mask{
                             position: absolute;
                             width: 100%;
@@ -508,6 +514,7 @@ main{
                         img{
                             width: 410px;
                             height: 240px;
+                            transition: all 0.4s;
                         }
                     }
                 }
@@ -901,10 +908,13 @@ footer{
                 font-weight: 600;
                 font-size: 16px;
                 line-height: 21px;
-
+                transition: all 0.4s;
                 color: #FFFFFF;
                 &:last-child{
                     margin-right: 80px;
+                }
+                &:hover{
+                    color: #F9DD9A;
                 }
             }
         }
