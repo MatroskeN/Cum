@@ -80,6 +80,7 @@ header .header_wrapper .header__lang_panel .fade_up_panel {
   height: 105px;
   left: -140px;
   opacity: 0;
+  pointer-events: none;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;

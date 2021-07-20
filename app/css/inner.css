@@ -1,0 +1,37 @@
+main {
+  padding-top: 102px;
+}
+main nav {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-bottom: 72px;
+  margin-top: 27px;
+}
+main nav ul {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+main nav ul li {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 149.19%;
+  /* identical to box height, or 21px */
+  color: #4C86A0;
+}
+main nav ul li a {
+  color: #58595B;
+  border-right: 1px solid #4C86A0;
+  padding-right: 5px;
+}
+main nav ul li p {
+  padding-left: 5px;
+}

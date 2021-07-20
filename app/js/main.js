@@ -46,9 +46,11 @@ let lang_counter = 1;
 $('.lang_button').on("click", function () {
   if (lang_counter == 1){
     $('.fade_up_panel').css({'opacity':'1'});
+    $('.fade_up_panel').css({'pointer-events':'all'});
     lang_counter*=-1;
   } else {
     $('.fade_up_panel').css({'opacity':'0'});
+    $('.fade_up_panel').css({'pointer-events':'none'});
     lang_counter*=-1;
   }
 });
