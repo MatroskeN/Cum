@@ -751,7 +751,6 @@ main{
         width: 100vw;
         background: #F9F8F8;
         position: relative;
-        padding-bottom: 105px;
         .contact_title{
             font-family: Roboto;
             font-style: normal;
@@ -811,6 +810,7 @@ main{
                 .contact_firm{
                     display: flex;
                     align-items: center;
+                    margin-top: 49px;
                     img{
                         margin-right:27px;
                     }
@@ -829,35 +829,97 @@ main{
                     }
                 }
             }
-        }
-        .contact_map{
-            position: absolute;
-            right: 0;
-            top:160px;
-            width: 50%;
-            height: 422px;  
-            overflow-x: hidden;
-            z-index: 1;
-            .map{
-                width: 100%;
-                height: 422px;            
-            }
-            .world_time{
-                position: absolute;
-                left: -224px;
-                bottom:143px;
-                background: #4C86A0;
-                p{
+            .contact_work{
+                display: flex;
+                flex-direction: column;
+                .contact_work-title{
                     font-family: Roboto;
                     font-style: normal;
-                    font-weight: 500;
-                    font-size: 16px;
+                    font-weight: bold;
+                    font-size: 20px;
                     line-height: 23px;
+                    /* identical to box height */
 
-                    color: #FFFFFF;
-                    padding: 11px 15px 12px 14px;
+                    text-transform: uppercase;
+
+                    color: #4C86A0;
+                    margin-bottom: 23px;
+                }
+                .contact_item{
+                    margin-bottom: 25px;
+                    strong{
+                        font-family: Roboto;
+                        font-style: normal;
+                        font-weight: bold;
+                        font-size: 20px;
+                        line-height: 23px;
+
+                        color: #4C86A0;
+                    }
+                    p{
+                        font-family: Roboto;
+                        font-style: normal;
+                        font-weight: normal;
+                        font-size: 16px;
+                        line-height: 149.19%;
+                        /* identical to box height, or 24px */
+
+
+                        color: #58595B;
+                        a{
+                            font-family: Roboto;
+                            font-style: normal;
+                            font-weight: normal;
+                            font-size: 16px;
+                            line-height: 149.19%;
+                            /* identical to box height, or 24px */
+
+
+                            color: #58595B;
+                        }
+                        margin-top: 7px;
+                    }
+                }
+                .world-time{
+                    display: flex;
+                    justify-content: space-between;
+                    .time-item{
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        p{
+                            font-family: Roboto;
+                            font-style: normal;
+                            font-weight: bold;
+                            font-size: 19px;
+                            line-height: 22px;
+
+                            color: #333333;
+                            margin-top: 11px;
+                            margin-bottom: 7px;
+                        }
+                        span{
+                            font-family: Roboto;
+                            font-style: normal;
+                            font-weight: 500;
+                            font-size: 15px;
+                            line-height: 18px;
+                            /* identical to box height */
+
+
+                            color: #333333;
+                        }
+                    }
                 }
             }
+        }
+        .contact_map{
+            position: relative;
+            width: 100%;
+            height: 487px;  
+            overflow-x: hidden;
+            z-index: 1;
+            margin-top: 53px;
         }
         .contact_vawe{
             position: absolute;
