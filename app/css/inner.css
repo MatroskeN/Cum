@@ -35,3 +35,77 @@ main nav ul li a {
 main nav ul li p {
   padding-left: 5px;
 }
+main .contact {
+  background: transparent;
+}
+main .contact .contact_vawe,
+main .contact .contact_vawe2 {
+  left: unset;
+  right: 0;
+}
+main .contact .contact_title {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: left;
+}
+main .contact .contact-line {
+  margin: 10px 0 50px 0;
+  width: 57px;
+  height: 2px;
+  background: #4C86A0;
+}
+main .error {
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 416px;
+  position: relative;
+}
+main .error .error-title {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 35px;
+  color: #4C86A0;
+}
+main .error .error-title .error-line {
+  margin: 10px 0 50px 0;
+  background: #4C86A0;
+  width: 57px;
+  height: 2px;
+}
+main .error .error-btns a {
+  border: 1px solid #4C86A0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 62px;
+  padding: 8px 23px 8px 23px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 149.19%;
+  /* identical to box height, or 24px */
+  color: #4C86A0;
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s;
+  margin-right: 18px;
+}
+main .error .error-btns a:hover {
+  background: #4C86A0;
+  color: #fff;
+}
+main .error .error-btns .main-link {
+  background: #4C86A0;
+  color: #fff;
+}
+main .error .error-btns .main-link:hover {
+  background: transparent;
+  color: #4C86A0;
+}
+main .error .error-pic {
+  position: absolute;
+  right: 0;
+  bottom: 24px;
+}

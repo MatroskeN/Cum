@@ -30,4 +30,81 @@ main{
             }
         }
     }
+    //контакты
+    .contact{
+        background: transparent;
+        .contact_vawe,.contact_vawe2{
+            left: unset;
+            right: 0;
+        }
+        .contact_title{
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: left;
+        }
+        .contact-line{
+            margin: 10px 0 50px 0;
+            width: 57px;
+            height: 2px;
+            background: #4C86A0;
+        }
+    }
+    //404
+    .error{
+        max-width: 1200px;
+        margin: 0 auto;
+        height: 416px;
+        position: relative;
+        .error-title{
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 30px;
+            line-height: 35px;
+
+            color: #4C86A0;
+            .error-line{
+                margin: 10px 0 50px 0;
+                background: #4C86A0;
+                width: 57px;
+                height: 2px;
+            }
+        }
+        .error-btns{
+            a{
+                border: 1px solid #4C86A0;
+                box-sizing: border-box;
+                border-radius: 62px;
+                padding: 8px 23px 8px 23px;
+                font-family: Roboto;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 16px;
+                line-height: 149.19%;
+                /* identical to box height, or 24px */
+
+
+                color: #4C86A0;
+                transition: all 0.4s;
+                margin-right: 18px;
+                &:hover{
+                    background: #4C86A0;
+                    color: #fff;
+                }
+            }
+            .main-link{
+                background: #4C86A0;
+                color: #fff;
+                &:hover{
+                    background: transparent;
+                    color: #4C86A0;
+                }
+            }
+        }
+        .error-pic{
+            position: absolute;
+            right: 0;
+            bottom: 24px;
+        }
+    }
 }
