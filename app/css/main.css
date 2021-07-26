@@ -1176,9 +1176,9 @@ footer .footer_wrapper .footer_menu {
 }
 footer .footer_wrapper .footer_menu .footer_item {
   margin-right: 37px;
-  font-family: Segoe UI;
+  font-family: 'Segoe UI';
   font-style: normal;
-  font-weight: 600;
+  font-weight: 300;
   font-size: 16px;
   line-height: 21px;
   -webkit-transition: all 0.4s;
@@ -1843,5 +1843,43 @@ footer .footer_basement .year {
     font-size: 16px;
     line-height: 21px;
     color: #FFFFFF;
+  }
+}
+@media (max-width: 768px) {
+  main .contact .contact_title {
+    max-width: 300px;
+  }
+  main .contact .contact_title .mhr {
+    display: none;
+  }
+  main .contact .contact_title .contact-line {
+    margin: 10px 0 15px 0;
+  }
+  main .contact .contact_wrapper .contact_work {
+    margin-left: unset;
+  }
+  main .contact .contact_wrapper .contact_work .contact_work-title {
+    font-size: 16px;
+    line-height: 19px;
+    margin-top: 20px;
+  }
+  main .contact .contact_wrapper .contact_work .contact_item strong {
+    font-size: 16px;
+    line-height: 19px;
+  }
+  main .contact .contact_wrapper .contact_work .contact_item p {
+    font-size: 14px;
+  }
+  main .contact .contact_wrapper .contact_work .contact_item p a {
+    font-size: 14px;
+  }
+  main .contact .contact_wrapper .contact_work .world-time .time-item img {
+    width: 72px;
+  }
+  main .contact .contact_wrapper .contact_work .world-time .time-item p {
+    font-size: 14px;
+  }
+  main .contact .contact_wrapper .contact_work .world-time .time-item span {
+    font-size: 11px;
   }
 }

@@ -107,4 +107,204 @@ main{
             bottom: 24px;
         }
     }
+
+    //оснащение
+    .equipment{
+        max-width: 1200px;
+        margin: 0 auto;
+        .equip_vawe{
+            position: absolute;
+            right: 0;
+            top: 0;
+            z-index: -1;
+        }
+        .equipment_title{
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: bold;
+            font-size: 30px;
+            line-height: 35px;
+
+            color: #4C86A0;
+        }
+        .equipment_line{
+            width: 57px;
+            height: 2px;
+            background-color: #4C86A0;
+            margin: 10px 0 38px 0;
+        }
+        .equipment-sort{
+            .sort-title{
+                font-family: 'Roboto';
+                font-style: normal;
+                font-weight: bold;
+                font-size: 20px;
+                line-height: 23px;
+                /* identical to box height */
+
+
+                color: #4C86A0;
+                margin-bottom: 25px;
+            }
+            .sort-pics{
+                img{
+                    &:first-child{
+                        margin-right: 25px;
+                    }
+                }
+            }
+            .sort-description{
+                font-family: 'Roboto';
+                font-style: normal;
+                font-weight: normal;
+                font-size: 16px;
+                line-height: 149.19%;
+                /* or 24px */
+
+
+                color: #58595B;
+                margin-top: 38px;
+            }
+        }
+        .equipment-gruz{
+            margin-top: 72px;
+            margin-bottom: 92px;
+            .gruz-title{
+                font-family: 'Roboto';
+                font-style: normal;
+                font-weight: bold;
+                font-size: 20px;
+                line-height: 23px;
+                /* identical to box height */
+
+
+                color: #4C86A0;
+                margin-bottom: 25px;
+            }
+            .gruz-pics{
+                img{
+                    &:first-child{
+                        margin-right: 25px;
+                    }
+                }
+            }
+            .gruz-description{
+                font-family: Roboto;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 16px;
+                line-height: 149.19%;
+                /* or 24px */
+
+
+                color: #58595B;
+                margin-top: 38px;
+            }
+        }
+    }
 }
+@media(max-width:1200px){
+    main{
+        .equipment{
+            max-width: 600px;
+        }
+    }
+}
+@media(max-width:768px){
+    main{
+        nav{
+            max-width: 300px;
+        }
+        .contact{
+            .contact_title{
+                max-width: 300px;
+                .mhr{
+                    display: none;
+                }
+                .contact-line{
+                    margin: 10px 0 15px 0;
+                }
+            }
+            .contact_wrapper{
+                .contact_work{
+                    margin-left: unset;
+                    .contact_work-title{
+                        font-size: 16px;
+                        line-height: 19px;
+                        margin-top: 20px;
+                    }
+                    .contact_item strong{
+                        font-size: 16px;
+                        line-height: 19px;
+                    }
+                    .contact_item p{
+                        font-size: 14px;
+                        a{
+                            font-size: 14px;
+                        }
+                    }
+                    .world-time .time-item img{
+                        width: 72px;
+                    }
+                    .world-time .time-item{
+                        p{
+                            font-size: 14px;
+                        }
+                        span{
+                            font-size: 11px;
+                        }
+                    }
+                }
+            }
+        }
+        .error{
+            max-width: 300px;
+            .error-pic{
+                display: none;
+            }
+            .error-btns a {
+                border: 1px solid #4C86A0;
+                -webkit-box-sizing: border-box;
+                box-sizing: border-box;
+                border-radius: 62px;
+                padding: 8px 14px 8px 14px;
+                font-family: Roboto;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 12px;
+                line-height: 149.19%;
+                color: #4C86A0;
+                -webkit-transition: all 0.4s;
+                -o-transition: all 0.4s;
+                transition: all 0.4s;
+                margin-right: 5px;
+            }
+        }
+        .equipment{
+            max-width: 300px;
+            .equipment-sort{
+                .sort-pics{
+                    img{
+                        width: 300px;
+                        &:first-child{
+                            margin-right: unset;
+                            margin-bottom: 15px;
+                        }
+                    }
+                }
+            }
+            .equipment-gruz{
+                .gruz-pics{
+                    img{
+                        width: 300px;
+                        &:first-child{
+                            margin-right: unset;
+                            margin-bottom: 15px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
