@@ -888,6 +888,7 @@ main{
                 .world-time{
                     display: flex;
                     justify-content: space-between;
+                    width: 500px;
                     .time-item{
                         display: flex;
                         flex-direction: column;
@@ -973,7 +974,7 @@ footer{
                 margin-right:37px;
                 font-family: 'Segoe UI';
                 font-style: normal;
-                font-weight: 300;
+                font-weight: 500;
                 font-size: 16px;
                 line-height: 21px;
                 transition: all 0.4s;
@@ -985,6 +986,10 @@ footer{
                     color: #F9DD9A;
                 }
             }
+        }
+        .anchor{
+            margin-left: auto;
+            margin-top: 34px;
         }
     }
     .footer_basement{
@@ -1111,17 +1116,16 @@ footer{
             .contact_wrapper{
                 max-width: 600px;
                 flex-direction: column;
+                .contact_work{
+                    .world-time{
+                        width: 300px;
+                    }
+                }
             }
             .contact_map{
                 position: unset;
                 width: 100%;
                 margin-top: 20px;
-                .world_time{
-                    position: absolute;
-                    left: 717px;
-                    top: 380px;
-                    bottom: unset;
-                }
             }
         }
     }
@@ -1561,7 +1565,7 @@ footer{
             display: block;
             .footer_menu{
                 max-width: 300px;
-                height: 120px;
+                height: 110px;
                 margin: 0 auto;
                 margin-top: 31px;
                 display: flex;
